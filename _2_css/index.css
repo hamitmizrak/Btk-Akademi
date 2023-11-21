@@ -3,6 +3,21 @@
 id   : #parag_id
 class: .parag_class 
 */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 15px;
+}
+
+body{
+    /* background-color: orange; */
+}
+
+
 .parag_class {
     color: blue;
     color: #123;
@@ -41,4 +56,65 @@ p:hover {
     background-color: rgba(227, 209, 13);
     transition: 2s ease-in-out;
     text-transform: uppercase;
+}
+
+.div_class {
+    width: 23%;
+    height: 50px;
+    border: 1px solid blue;
+    background-color: red!important;
+    display: inline-block;
+    padding:1rem;
+    transition: 3s all;
+    border-radius: 5%;
+}
+
+.div_class:hover{
+    cursor: pointer;
+    width: 45%;
+    border-radius: 7%;
+    transform: rotate(180deg);
+}
+
+
+/* List */
+ul{
+    list-style-type: none;
+   
+}
+ul li{
+    display: inline-block;
+    background-color: blueviolet;
+    color:white;
+    padding-top:0.3rem;
+    padding-left:0.2rem;
+    padding-right:0.2rem;
+    padding-bottom:0.2rem;
+    margin-bottom:1rem;
+    border-radius: 5%;
+    font-size: .8rem;
+    position: fixed;
+    top:0;
+}
+
+ul li:hover{
+    background-color:white ;
+    color:blueviolet;
+    transition: 2s all;
+    cursor: pointer;
+}
+
+#back_top{
+position: fixed;
+right: 0;
+bottom:0;
+background-color: blue;
+color:white;
+padding:0.1rem;
+opacity: 0.8;
+border-radius: 10%;
+}
+
+#back_top:hover{
+    opacity: 0.5;
 }
