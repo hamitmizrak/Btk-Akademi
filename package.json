@@ -1,0 +1,16 @@
+{
+  "name": "btk-akademi",
+  "version": "1.0.0",
+  "description": "for html5, css3, js,react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html5",
+    "css3",
+    "js"
+  ],
+  "author": "Hamit Mızrak",
+  "license": "ISC"
+}
