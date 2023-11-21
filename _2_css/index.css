@@ -134,3 +134,20 @@ border-radius: 10%;
 #back_top:hover{
     opacity: 0.5;
 }
+
+.div_float{
+    background-color: blue;
+    color:white;
+    width: 23%;
+    display: inline-block;
+    min-height: 50px;
+    padding:1rem;
+    float: right;
+    margin-right:10px;
+    margin-bottom:2rem;
+    box-shadow: 1px 0.8px 5px 0.8px rgba(0,0,0,.8)
+}
+
+.div_float:hover{
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,.5)
+}
