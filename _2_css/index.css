@@ -1,4 +1,21 @@
 /* css comment */
 p{
-    color:yellow;
+    color:blue;
+    color:#123;
+    color:#ff1122;
+    color:rgb(0,0,0);
+    color:rgba(0,0,0,0.4);
+    color:rgba(227, 13, 13, 0.7);
+
+    background-color: black;
+    text-align: justify;
+
+    padding-top:30px;
+    padding-right:20px;
+    padding-bottom:20px;
+    padding-left:15px;
+    padding: 30px 20px 20px 15px;
+    padding:20px;
+    padding:30px 20px;
+    margin:30px 20px 20px 15px;
 }
