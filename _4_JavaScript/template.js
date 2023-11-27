@@ -88,8 +88,8 @@ multiple Comment
 // document.writeln(data2+" <br/>");
 
 // NaN
-//  let data3="Merhabalar"/2;
-//  document.writeln(data3+" <br/>");
+// let data3="Merhabalar"/2;
+// document.writeln(data3+" <br/>");
 
 
 /////////////////////////////////////////////////////
