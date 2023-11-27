@@ -4,7 +4,6 @@
 multiple Comment
 */
 
-
 // console.log("console.log");
 // console.info("console.info");
 // console.warn("console.warn");
@@ -91,7 +90,6 @@ multiple Comment
 // let data3="Merhabalar"/2;
 // document.writeln(data3+" <br/>");
 
-
 /////////////////////////////////////////////////////
 // Math
 // document.writeln(Math.PI+" <br/>");
@@ -109,6 +107,21 @@ multiple Comment
 // document.writeln(Math.asin(1)+" <br/>");
 // document.writeln(Math.cos(2.5)+" <br/>");
 // document.writeln(Math.floor(Math.random()*9+1)+"<br/>");
+
+//ÖDEV: Aşağıdaki örnekleri math ile çözelim ?
+// -5.9 sayıyının aşağıdaki işlemleri yaptıralım ?
+// 1-mutlak değeri alsın 5.9
+// 2-yuvarlama yapsın  6.0
+// 3-karesini alsın 36.00
+// 4-karekök alsın 6.0
+// 5-yuvarlama yapsın 6.0
+// 6-)çıkan sonucu 5 bölsün 6/5=1
+// 7-) iki sayı arasından karşılaştırma yapsın en küçüğünü alsın ve 1 ve 5
+// 8-) küçük sayı eğer tekse 3 eklesin çiftse 5 eklesin 
+// Örnek-5 : kullanıcı tarafından girilen bir sayıyı negatif mi pozitif mi olduğu ekran yazdıran algoritma ?
+// NOT: cast kullalım ?
+// Örnek-6 : kullanıcı tarafından password ve repassword alalım sonrasında bu iki değeri karşılaştırma yapalım
+// eğer aynı girilirse aynı veri yoksa birbirine uymadı yazan algoritma yapalım
 
 /////////////////////////////////////////////////////
 // String 
@@ -207,7 +220,6 @@ function normalFunction(){
     document.writeln("Normal Function <br/>")
 }
 normalFunction()
-
 
 // Anonymous Function
 const anonymousFunction= function (){
