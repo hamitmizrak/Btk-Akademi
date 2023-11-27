@@ -151,45 +151,77 @@ multiple Comment
 /////////////////////////////////////////////////////
 // Function
 // 1- retursuz Parametresiz
-function retursuzParametresiz(){
-    document.writeln("1- retursuz Parametresiz <br/>");
-}
-retursuzParametresiz()
+// function retursuzParametresiz(){
+//     document.writeln("1- retursuz Parametresiz <br/>");
+// }
+// retursuzParametresiz()
 
-// 2- retursuz Parametreli
-function retursuzParametreli(uFullName){
-    document.writeln("2- retursuz Parametreli "+uFullName+"<br/>");
-}
-retursuzParametreli("Hamit Mızrak")
+// // 2- retursuz Parametreli
+// function retursuzParametreli(uFullName){
+//     document.writeln("2- retursuz Parametreli "+uFullName+"<br/>");
+// }
+// retursuzParametreli("Hamit Mızrak")
 
-// 3- returnlu Parametresiz
-function returnluParametresiz(){
-    return "3- returnlu Parametresiz <br/>"
-}
-const data3=returnluParametresiz()
-document.writeln(data3+" <br/>")
+// // 3- returnlu Parametresiz
+// function returnluParametresiz(){
+//     return "3- returnlu Parametresiz <br/>"
+// }
+// const data3=returnluParametresiz()
+// document.writeln(data3+" <br/>")
 
-// 4- returnlu Parametresiz
-function returnluParametreli(uFullName){
-    return "4- returnlu Parametresiz "+uFullName+ "<br/>"
-}
-const data4=returnluParametreli("Hamit Mızrak")
-document.writeln(data4+" <br/>")
+// // 4- returnlu Parametresiz
+// function returnluParametreli(uFullName){
+//     return "4- returnlu Parametresiz "+uFullName+ "<br/>"
+// }
+// const data4=returnluParametreli("Hamit Mızrak")
+// document.writeln(data4+" <br/>")
 
 /////////////////////////////////////////////////////
-// Normal Function
-// Anonymous Function
-// Arrow Function
+
 // Immedia Function (IF)
+(
+    function (){
+        document.writeln("Immedia Function <br/>")
+    }
+)()
+
+// Normal Function
+function normalFunction(){
+    document.writeln("Normal Function <br/>")
+}
+normalFunction()
+
+
+// Anonymous Function
+const anonymousFunction= function (){
+    document.writeln("Anonymous Function <br/>")
+}
+anonymousFunction()
+
+
+// Arrow Function
+const arrowFunction= ()=>{
+    document.writeln("Arrow Function <br/>")
+}
+arrowFunction()
+
+/////////////////////////////////////////////////////
 // conditional, ternary, switch-case
+
+/////////////////////////////////////////////////////
 // Loop
+// debug
 // break, continue ,return
 // Exception Handling
+/////////////////////////////////////////////////////
 // setTimeOut
 // setIntercal
-// debug
+/////////////////////////////////////////////////////
 // diziler
+/////////////////////////////////////////////////////
 // object
+/////////////////////////////////////////////////////
 // dom
+/////////////////////////////////////////////////////
 // event
 // Listener
