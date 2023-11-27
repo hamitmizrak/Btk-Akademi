@@ -112,23 +112,23 @@ multiple Comment
 
 /////////////////////////////////////////////////////
 // String 
-let vocabulary="js ÖĞREniyorum js ";
-document.writeln(vocabulary+" <br/>")
-document.writeln(vocabulary.length+" <br/>")
-document.writeln(vocabulary.trim().length+" <br/>")
+// let vocabulary="js ÖĞREniyorum js ";
+// document.writeln(vocabulary+" <br/>")
+// document.writeln(vocabulary.length+" <br/>")
+// document.writeln(vocabulary.trim().length+" <br/>")
 
-document.writeln(vocabulary.toUpperCase()+" <br/>")
-document.writeln(vocabulary.toLowerCase()+" <br/>")
+// document.writeln(vocabulary.toUpperCase()+" <br/>")
+// document.writeln(vocabulary.toLowerCase()+" <br/>")
 
-document.writeln(vocabulary.indexOf("js")+" <br/>")
-document.writeln(vocabulary.lastIndexOf("js")+" <br/>");
-document.writeln(vocabulary.charAt(1)+" <br/>");
+// document.writeln(vocabulary.indexOf("js")+" <br/>")
+// document.writeln(vocabulary.lastIndexOf("js")+" <br/>");
+// document.writeln(vocabulary.charAt(1)+" <br/>");
 
-document.writeln(vocabulary.concat("INC")+" <br/>");
-document.writeln(vocabulary.replace(vocabulary," değiştirdim")+" <br/>");
+// document.writeln(vocabulary.concat("INC")+" <br/>");
+// document.writeln(vocabulary.replace(vocabulary," değiştirdim")+" <br/>");
 
-document.writeln(vocabulary.substring(1)+" <br/>");
-document.writeln(vocabulary.substring(1,5)+" <br/>"); // 1<=X<=5-1
+// document.writeln(vocabulary.substring(1)+" <br/>");
+// document.writeln(vocabulary.substring(1,5)+" <br/>"); // 1<=X<=5-1
 
 /////////////////////////////////////////////////////
 
@@ -150,6 +150,34 @@ document.writeln(vocabulary.substring(1,5)+" <br/>"); // 1<=X<=5-1
 
 /////////////////////////////////////////////////////
 // Function
+// 1- retursuz Parametresiz
+function retursuzParametresiz(){
+    document.writeln("1- retursuz Parametresiz <br/>");
+}
+retursuzParametresiz()
+
+// 2- retursuz Parametreli
+function retursuzParametreli(uFullName){
+    document.writeln("2- retursuz Parametreli "+uFullName+"<br/>");
+}
+retursuzParametreli("Hamit Mızrak")
+
+// 3- returnlu Parametresiz
+function returnluParametresiz(){
+    return "3- returnlu Parametresiz <br/>"
+}
+const data3=returnluParametresiz()
+document.writeln(data3+" <br/>")
+
+// 4- returnlu Parametresiz
+function returnluParametreli(uFullName){
+    return "4- returnlu Parametresiz "+uFullName+ "<br/>"
+}
+const data4=returnluParametreli("Hamit Mızrak")
+document.writeln(data4+" <br/>")
+
+/////////////////////////////////////////////////////
+// Normal Function
 // Anonymous Function
 // Arrow Function
 // Immedia Function (IF)
