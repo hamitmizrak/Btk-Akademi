@@ -148,3 +148,20 @@ document.writeln(vocabulary.substring(1,5)+" <br/>"); // 1<=X<=5-1
 // S-10) girdiğiniz 0 ile 4 arasındaki indexi ekranda gösterin? (subString())
 
 
+/////////////////////////////////////////////////////
+// Function
+// Anonymous Function
+// Arrow Function
+// Immedia Function (IF)
+// conditional, ternary, switch-case
+// Loop
+// break, continue ,return
+// Exception Handling
+// setTimeOut
+// setIntercal
+// debug
+// diziler
+// object
+// dom
+// event
+// Listener
