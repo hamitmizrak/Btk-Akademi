@@ -132,7 +132,8 @@ multiple Comment
 
 /////////////////////////////////////////////////////
 
-// ÖDEV // kullanıcı tarafından girilen bir kelimenin (prompt)
+// ÖDEV-1 
+// kullanıcı tarafından girilen bir kelimenin (prompt)
 // let userData= prompt("Lütfen bir şeyler yazınız")  ;
 // S-1) Kaç karakterlidir ? (length)
 // S-2) boşluklar alınarak Kaç karakterlidir ? (trim)
@@ -178,6 +179,22 @@ multiple Comment
 
 /////////////////////////////////////////////////////
 
+// ÖDEV -2 
+//NOT: örneklerimizi function,anonymous ve arrow function ile yapalım.
+//NOT: değişken olarak var,let,const kullanalım.
+//Örnek-1
+//y=3x+4k ==>1.dereceden2bilinmeyenlidenklem algoritması
+//Kullanıcı tarafından alınan x ve kdeğerlerini hesaplayan algoritma yazınız ?
+
+//örnek-2
+//Kullanıcı tarafından alınan dereceyi  Fahrenhayta çeviren algoritma yapalım.
+//Formül: (derece*9/5)+32
+
+//örnek-3 operatör işlemleri: aşağıdaki örneği javascript ile yapalım
+//4+3*2(3:3-1*6+9:1+(3:3))
+
+/////////////////////////////////////////////////////
+
 // Immedia Function (IF)
 (
     function (){
@@ -197,7 +214,6 @@ const anonymousFunction= function (){
     document.writeln("Anonymous Function <br/>")
 }
 anonymousFunction()
-
 
 // Arrow Function
 const arrowFunction= ()=>{
