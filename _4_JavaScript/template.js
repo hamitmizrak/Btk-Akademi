@@ -208,42 +208,137 @@ multiple Comment
 
 /////////////////////////////////////////////////////
 
-// Immedia Function (IF)
-(
-    function (){
-        document.writeln("Immedia Function <br/>")
-    }
-)()
+// // Immedia Function (IF)
+// (
+//     function (){
+//         document.writeln("Immedia Function <br/>")
+//     }
+// )()
 
-// Normal Function
-function normalFunction(){
-    document.writeln("Normal Function <br/>")
-}
-normalFunction()
+// // Normal Function
+// function normalFunction(){
+//     document.writeln("Normal Function <br/>")
+// }
+// normalFunction()
 
-// Anonymous Function
-const anonymousFunction= function (){
-    document.writeln("Anonymous Function <br/>")
-}
-anonymousFunction()
+// // Anonymous Function
+// const anonymousFunction= function (){
+//     document.writeln("Anonymous Function <br/>")
+// }
+// anonymousFunction()
 
-// Arrow Function
-const arrowFunction= ()=>{
-    document.writeln("Arrow Function <br/>")
-}
-arrowFunction()
+// // Arrow Function
+// const arrowFunction= ()=>{
+//     document.writeln("Arrow Function <br/>")
+// }
+// arrowFunction()
 
 /////////////////////////////////////////////////////
 // conditional, ternary, switch-case
+const conditional = () => {
+    const number = 5;
+    if (number > 0)
+        document.writeln("Pozitiftir <br/>");
+    else {
+        document.writeln("Negatif <br/>");
+    }
+}
+//conditional()
+
+const conditional2 = () => {
+    const number = 5;
+    const ternary = (number > 0) ? "Pozitiftir <br/>" : "Negatif <br/>";
+    document.writeln(ternary);
+}
+//conditional2()
+
+const conditional3 = () => {
+    const number = 5;
+    if (number == 1) {
+        document.writeln("1 <br/>");
+    } if (number === 2) {
+        document.writeln("2 <br/>");
+    } if (number === 3) {
+        document.writeln("3 <br/>");
+    } if (number === 4) {
+        document.writeln("4 <br/>");
+    } if (number === 5) {
+        document.writeln("5 <br/>");
+    } else {
+        document.writeln("1<=SAYI<=5 dışında <br/>");
+    }
+}
+//conditional3()
+
+const conditional4 = () => {
+    const number = 5;
+
+    switch (number) {
+        case 1:
+            document.writeln("1 <br/>");
+            break;
+        case 2:
+            document.writeln("2 <br/>");
+            break;
+        case 3:
+            document.writeln("3 <br/>");
+            break;
+        case 4:
+            document.writeln("4 <br/>");
+            break;
+        case 5:
+            document.writeln("5 <br/>");
+            break;
+        default:
+            document.writeln("1<=SAYI<=5 dışında <br/>");
+            break;
+    }
+}
+//conditional4()
+
+// break: döngünün çalışmaması için kullanırız.
+// return: function çalışmaması için kullanırız.
+// continue:sadece o şarta çalışmasının döngü devam etsin
+
+// debug
 
 /////////////////////////////////////////////////////
 // Loop
-// debug
-// break, continue ,return
-// Exception Handling
+// For Loop
+const loop1 = () => {
+    for (let i = 1; i <= 9; i++) {
+        document.writeln(i + " ");
+    }
+    document.writeln("<br/>");
+}
+loop1()
+
+// While Loop
+const loop2 = () => {
+    let i = 1;
+    while (i <= 9) {
+        document.writeln(i + " ");
+        i = i + 1;
+    }
+    document.writeln("<br/>");
+}
+loop2()
+
+// Do-While Loop
+const loop3 = () => {
+    let i = 1;
+    do {
+        document.writeln(i + " ");
+        i = i + 1;
+    } while (i <= 9);
+    document.writeln("<br/>");
+}
+loop3()
+
 /////////////////////////////////////////////////////
+// Exception Handling
 // setTimeOut
-// setIntercal
+// setInterval
 /////////////////////////////////////////////////////
 // diziler
 /////////////////////////////////////////////////////
@@ -253,3 +348,7 @@ arrowFunction()
 /////////////////////////////////////////////////////
 // event
 // Listener
+
+/////////////////////////////////////////////////////
+// GENEL BİR ÖRNEK:
+// Form Html5- css3 -Bootstrap- JS -jquery
