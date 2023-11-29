@@ -1,0 +1,5 @@
+Önce Sisteme Gir     : https://gitlab.koddeposu.gov.tr/
+Token oluştur        : https://gitlab.koddeposu.gov.tr/hamitmizrak/frontend/-/settings/access_tokens
+Mutlaka https olmalı : git remote add gitlab3 https://gitlab.koddeposu.gov.tr/hamitmizrak/frontend.git 
+Gönder               : git push -u gitlab3 main
+Token Girme          : Kullanıcı adınızı ve oluşturduğunuz token çıkan ekranda yazıyorsunuz.
