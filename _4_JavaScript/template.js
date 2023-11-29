@@ -352,8 +352,22 @@ const exceptionHandlingData = () => {
 }
 // exceptionHandlingData();
 
+/////////////////////////////////////////////////////
+// setTimeOut setInterval
+const setTimeOutSetInterval=()=>{
+  
 // setTimeOut
-// setInterval
+setTimeout(() => {
+    console.log("set Time Out: 2sn ");
+}, 2000);
+
+// setInterval  
+setInterval(() => {
+    console.log("set Interval: 1sn ");
+}, 2000);
+}
+setTimeOutSetInterval()
+
 /////////////////////////////////////////////////////
 // diziler
 /////////////////////////////////////////////////////
