@@ -507,7 +507,7 @@ const objectData = () => {
     console.log(person.surname.toUpperCase().substring(0, 3).concat("***"));
     console.log(person.javascript.version);
     console.log(person.addYear());
-    person.otherProperties="Deneme";
+    person.password="Deneme";
     console.log(person.otherProperties);
 }
 objectData()
