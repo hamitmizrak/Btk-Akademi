@@ -339,13 +339,13 @@ const loop3 = () => {
 // Exception Handling
 const exceptionHandlingData = () => {
     console.log("ilk satır");
-    
+
     try {
-       alertx("Alert data"); 
-       
+        alertx("Alert data");
+
     } catch (err) {
-        console.error("Hata !!! "+err);
-    } finally{
+        console.error("Hata !!! " + err);
+    } finally {
         console.log("port.close()");
     }
     console.log("son satır");
@@ -354,22 +354,74 @@ const exceptionHandlingData = () => {
 
 /////////////////////////////////////////////////////
 // setTimeOut setInterval
-const setTimeOutSetInterval=()=>{
-  
-// setTimeOut
-setTimeout(() => {
-    console.log("set Time Out: 2sn ");
-}, 2000);
+const setTimeOutSetInterval = () => {
 
-// setInterval  
-setInterval(() => {
-    console.log("set Interval: 1sn ");
-}, 2000);
+    // setTimeOut
+    setTimeout(() => {
+        console.log("set Time Out: 2sn ");
+    }, 2000);
+
+    // setInterval  
+    setInterval(() => {
+        console.log("set Interval: 1sn ");
+    }, 2000);
 }
-setTimeOutSetInterval()
+//setTimeOutSetInterval()
 
 /////////////////////////////////////////////////////
 // diziler
+const arrayFunction = () => {
+    let arr = ["Malatya", "Elazığ", 44, 23, true, false];
+    console.log(arr);
+    document.writeln();
+}
+//arrayFunction()
+
+const arrayFunction2 = () => {
+    let arr = [5, 9, 3, 4, 8, 1, 7];
+    arr[7] = 2;
+    console.log(arr);
+    console.log(arr[0]);
+    console.log(arr[7]);
+    console.log(arr[arr.length - 1]);
+}
+//arrayFunction2()
+
+// array Data Set
+const dataSet = () => {
+    let arr = [5, 9, 3, 4, 8, 1, 7, 2];
+    return arr;
+}
+const arrayFunction3 = () => {
+    let arr = dataSet();
+    //console.log(arr);
+
+    // Iterative
+    for (let i = 0; i < arr.length; i++) {
+        document.writeln(arr[i]);
+    }
+    document.writeln("<br/>");
+
+    // IN
+    for (let temp in arr) {
+        document.writeln(temp + " => " + arr[temp] + " <br/>");
+    }
+    document.writeln("<br/>");
+
+    // OF
+    for (let temp of arr) {
+        document.writeln(temp + "<br/>");
+    }
+
+    // FOREACH
+    // forEach(callbackfn: (value: T, index: number, array: T[]) => void, thisArg?: any): void;
+    arr.forEach((value, index, array)=>{
+        document.writeln(index + " => " + value + " <br/>");
+    });
+}
+arrayFunction3()
+
+
 /////////////////////////////////////////////////////
 // object
 /////////////////////////////////////////////////////
