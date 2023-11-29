@@ -311,7 +311,7 @@ const loop1 = () => {
     }
     document.writeln("<br/>");
 }
-loop1()
+//loop1()
 
 // While Loop
 const loop2 = () => {
@@ -322,7 +322,7 @@ const loop2 = () => {
     }
     document.writeln("<br/>");
 }
-loop2()
+//loop2()
 
 // Do-While Loop
 const loop3 = () => {
@@ -333,10 +333,25 @@ const loop3 = () => {
     } while (i <= 9);
     document.writeln("<br/>");
 }
-loop3()
+//loop3()
 
 /////////////////////////////////////////////////////
 // Exception Handling
+const exceptionHandlingData = () => {
+    console.log("ilk satır");
+    
+    try {
+       alertx("Alert data"); 
+       
+    } catch (err) {
+        console.error("Hata !!! "+err);
+    } finally{
+        console.log("port.close()");
+    }
+    console.log("son satır");
+}
+// exceptionHandlingData();
+
 // setTimeOut
 // setInterval
 /////////////////////////////////////////////////////
