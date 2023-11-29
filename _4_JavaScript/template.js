@@ -419,8 +419,70 @@ const arrayFunction3 = () => {
         document.writeln(index + " => " + value + " <br/>");
     });
 }
-arrayFunction3()
+// arrayFunction3()
 
+const arrayFunction4 = () => {
+    let arr = dataSet();
+
+    arr.push(44)
+    console.log(arr);
+
+    arr.unshift(23)
+    console.log(arr);
+
+    arr.pop()
+    console.log(arr);
+
+    arr.shift()
+    console.log(arr);
+
+    arr.sort();
+    console.log(arr);
+
+    arr.reverse()
+    console.log(arr);
+
+    arr.sort().reverse()
+    console.log(arr);
+
+    //to String
+    console.log(arr.toString());
+    console.log(arr.toString().substring(0,4));
+
+     //to join
+     console.log(arr.join(" "));
+
+}
+ // arrayFunction4 ()
+
+
+
+ const arrayFunction5 = () => {
+    let arr = dataSet();
+    //console.log(arr);
+
+    // FOREACH
+    // forEach(callbackfn: (value: T, index: number, array: T[]) => void, thisArg?: any): void;
+    arr.forEach((value, index, array)=>{
+        console.log(index + " => " + value + " <br/>");
+    });
+    
+    console.log(" filter ");
+    arr.filter((value, index, array)=>{
+       return value % 2==0;
+    }).forEach((value, index, array)=>{
+        console.log(index + " => " + value + " <br/>");
+    })
+
+    console.log(" map ");
+    arr.map((value, index, array)=>{
+        return value =value+10;
+     }).forEach((value, index, array)=>{
+         console.log(index + " => " + value + " <br/>");
+     })
+
+}
+ arrayFunction5()
 
 /////////////////////////////////////////////////////
 // object
