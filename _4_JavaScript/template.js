@@ -455,8 +455,6 @@ const arrayFunction4 = () => {
 }
  // arrayFunction4 ()
 
-
-
  const arrayFunction5 = () => {
     let arr = dataSet();
     //console.log(arr);
