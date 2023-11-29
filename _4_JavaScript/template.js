@@ -415,7 +415,7 @@ const arrayFunction3 = () => {
 
     // FOREACH
     // forEach(callbackfn: (value: T, index: number, array: T[]) => void, thisArg?: any): void;
-    arr.forEach((value, index, array)=>{
+    arr.forEach((value, index, array) => {
         document.writeln(index + " => " + value + " <br/>");
     });
 }
@@ -447,43 +447,70 @@ const arrayFunction4 = () => {
 
     //to String
     console.log(arr.toString());
-    console.log(arr.toString().substring(0,4));
+    console.log(arr.toString().substring(0, 4));
 
-     //to join
-     console.log(arr.join(" "));
+    //to join
+    console.log(arr.join(" "));
 
 }
- // arrayFunction4 ()
+// arrayFunction4 ()
 
- const arrayFunction5 = () => {
+const arrayFunction5 = () => {
     let arr = dataSet();
     //console.log(arr);
 
     // FOREACH
     // forEach(callbackfn: (value: T, index: number, array: T[]) => void, thisArg?: any): void;
-    arr.forEach((value, index, array)=>{
+    arr.forEach((value, index, array) => {
         console.log(index + " => " + value + " <br/>");
     });
-    
+
     console.log(" filter ");
-    arr.filter((value, index, array)=>{
-       return value % 2==0;
-    }).forEach((value, index, array)=>{
+    arr.filter((value, index, array) => {
+        return value % 2 == 0;
+    }).forEach((value, index, array) => {
         console.log(index + " => " + value + " <br/>");
     })
 
     console.log(" map ");
-    arr.map((value, index, array)=>{
-        return value =value+10;
-     }).forEach((value, index, array)=>{
-         console.log(index + " => " + value + " <br/>");
-     })
-
+    arr.map((value, index, array) => {
+        return value = value + 10;
+    }).forEach((value, index, array) => {
+        //  console.log(index + " => " + value + " <br/>");
+        console.log(`${index} => ${value} <br/>`);
+    })
 }
- arrayFunction5()
+//arrayFunction5()
 
 /////////////////////////////////////////////////////
 // object
+const objectData = () => {
+    let person = {
+        "name": "Hamit",
+        "surname": "Mızrak",
+        "number": 44,
+        isLogin: true,
+        diller: ["java", "c#", "c++", "javascript", "php"],
+        addYear: function () {
+            console.log("Object in Function");
+        },
+        javascript: {
+            "name": "JavaScript",
+            "version": "12",
+            "date": "1995",
+        }
+    };
+    console.log(person);
+    console.log(person.name);
+    console.log(person["name"]);
+    console.log(person.surname);
+    console.log(person.surname.toUpperCase().substring(0, 3).concat("***"));
+    console.log(person.javascript.version);
+    console.log(person.addYear());
+    person.otherProperties="Deneme";
+    console.log(person.otherProperties);
+}
+objectData()
 /////////////////////////////////////////////////////
 // dom
 /////////////////////////////////////////////////////
