@@ -16,15 +16,45 @@
 </head>
 
 <body>
-  <header>
-    <!-- place navbar here -->
-  </header>
-  <main>
 
-  </main>
-  <footer>
-    <!-- place footer here -->
-  </footer>
+  <h2 class="text-center text-primary">Form Login</h2>
+  <hr style="width:25%; margin-left:38%">
+  <!-- event="prevent.Default()" -->
+  <form  method="get" autocomplete="on" id="form_id" name="form_name">
+
+    <div class="container">
+      <div class="row">
+
+        <!-- Emailiniz -->
+        <div class="col-md-1">
+          <label for="">Emailiniz:</label>
+        </div>
+        <div class="col-md-11">
+          <input type="email" id="email_id" autofocus="true" required placeholder="Emailiniz" title="Emailiniz ... ">
+        </div>
+
+        <!-- Şifreniz -->
+        <div class="col-md-1 mt-2">
+          <label for="">Şifreniz:</label>
+        </div>
+        <div class="col-md-11 mt-2">
+          <input type="password" id="password_id"  required placeholder="Şifreniz" title="Şifreniz ... ">
+        </div>
+
+        <div class="col-md-1 mt-2">
+          <label for="">:</label>
+        </div>
+        <div class="col-md-11 mt-4">
+         <input type="reset" class="btn btn-warning" value="Temizle">
+         <button type="submit" class="btn btn-primary"> Gönder </button>
+        </div>
+
+      </div>
+    </div>
+  </form>
+
+
+
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
