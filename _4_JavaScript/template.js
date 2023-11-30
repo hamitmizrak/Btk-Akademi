@@ -565,8 +565,13 @@ listener_data()
 // Local Storage
 const localStorageFunction=()=>{
 // setItem
+localStorage.setItem("unique_data","JS öğreniyorum");
+
 // getItem
+const data=localStorage.getItem("unique_data");
+//alert(data)
 // clear
+localStorage.clear()
 // removeItem
 }
 
