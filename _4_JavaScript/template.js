@@ -538,6 +538,28 @@ const dom_event=()=>{
 
 /////////////////////////////////////////////////////
 // Listener
+const listener_data=()=>{
+    const dom=document.getElementById("parag_id");
+    dom.addEventListener("click",(event)=>{
+alert("Paragraf okuması nasıl gidiyor-1 :) ")
+    });
+}
+listener_data()
+
+// const listener_data2=function(){
+//     const dom=document.getElementById("parag_id");
+//     dom.addEventListener("click",(event)=>{
+// alert("Paragraf okuması nasıl gidiyor-2 :) ")
+//     });
+// }
+// listener_data2()
+
+// (()=>{
+//     const dom=document.getElementById("parag_id");
+//     dom.addEventListener("click",(event)=>{
+// alert("Paragraf okuması nasıl gidiyor-3 :) ")
+//     });
+// })()
 
 /////////////////////////////////////////////////////
 // Local Storage
