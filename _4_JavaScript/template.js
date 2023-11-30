@@ -485,6 +485,8 @@ const arrayFunction5 = () => {
 /////////////////////////////////////////////////////
 // object
 const objectData = () => {
+    const password44=prompt("Lütfen şifrenizi giriniz");
+
     let person = {
         "name": "Hamit",
         "surname": "Mızrak",
@@ -507,15 +509,29 @@ const objectData = () => {
     console.log(person.surname.toUpperCase().substring(0, 3).concat("***"));
     console.log(person.javascript.version);
     console.log(person.addYear());
-    person.password="Deneme";
-    console.log(person.otherProperties);
+    person.password=password44;
+    console.log(person.password);
 }
-objectData()
-/////////////////////////////////////////////////////
-// dom
+//objectData()
+
 /////////////////////////////////////////////////////
 // event
+const event1 =()=>{
+alert("Event -1 çalıştı")
+}
+
+const event2 =()=>{
+    alert("Event - çalıştı")
+    }
+    
+/////////////////////////////////////////////////////
+// dom
+
+/////////////////////////////////////////////////////
 // Listener
+
+/////////////////////////////////////////////////////
+// Local Storage
 
 /////////////////////////////////////////////////////
 // GENEL BİR ÖRNEK:
