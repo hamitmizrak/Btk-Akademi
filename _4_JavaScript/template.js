@@ -526,6 +526,15 @@ const event2 =()=>{
     
 /////////////////////////////////////////////////////
 // dom
+const dom_event=()=>{
+   //alert("deneme")
+   const data=document.getElementById("parag_id");
+   document.getElementById("parag_id").innerHTML="<b><i><mark>Merhabalar değişti.</mark></i></b>" 
+   data.innerText="Merhabalar değişti.";
+   data.style.color="yellow";
+   data.style.backgroundColor="black";
+   data.style.padding="2rem";
+}
 
 /////////////////////////////////////////////////////
 // Listener
