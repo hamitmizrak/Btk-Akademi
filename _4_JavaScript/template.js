@@ -485,7 +485,7 @@ const arrayFunction5 = () => {
 /////////////////////////////////////////////////////
 // object
 const objectData = () => {
-    const password44=prompt("Lütfen şifrenizi giriniz");
+    const password44 = prompt("Lütfen şifrenizi giriniz");
 
     let person = {
         "name": "Hamit",
@@ -509,39 +509,39 @@ const objectData = () => {
     console.log(person.surname.toUpperCase().substring(0, 3).concat("***"));
     console.log(person.javascript.version);
     console.log(person.addYear());
-    person.password=password44;
+    person.password = password44;
     console.log(person.password);
 }
 //objectData()
 
 /////////////////////////////////////////////////////
 // event
-const event1 =()=>{
-alert("Event -1 çalıştı")
+const event1 = () => {
+    alert("Event -1 çalıştı")
 }
 
-const event2 =()=>{
+const event2 = () => {
     alert("Event - çalıştı")
-    }
-    
-/////////////////////////////////////////////////////
-// dom
-const dom_event=()=>{
-   //alert("deneme")
-   const data=document.getElementById("parag_id");
-   document.getElementById("parag_id").innerHTML="<b><i><mark>Merhabalar değişti.</mark></i></b>" 
-   data.innerText="Merhabalar değişti.";
-   data.style.color="yellow";
-   data.style.backgroundColor="black";
-   data.style.padding="2rem";
 }
 
 /////////////////////////////////////////////////////
-// Listener
-const listener_data=()=>{
-    const dom=document.getElementById("parag_id");
-    dom.addEventListener("click",(event)=>{
-alert("Paragraf okuması nasıl gidiyor-1 :) ")
+// d o m
+const dom_event = () => {
+    //alert("deneme")
+    const data = document.getElementById("parag_id");
+    document.getElementById("parag_id").innerHTML = "<b><i><mark>Merhabalar değişti.</mark></i></b>"
+    data.innerText = "Merhabalar değişti.";
+    data.style.color = "yellow";
+    data.style.backgroundColor = "black";
+    data.style.padding = "2rem";
+}
+
+/////////////////////////////////////////////////////
+// Add Event Listener
+const listener_data = () => {
+    const dom = document.getElementById("parag_id");
+    dom.addEventListener("click", (event) => {
+        alert("Paragraf okuması nasıl gidiyor-1 :) ")
     });
 }
 listener_data()
@@ -563,9 +563,18 @@ listener_data()
 
 /////////////////////////////////////////////////////
 // Local Storage
+const localStorageFunction=()=>{
+// setItem
+// getItem
+// clear
+// removeItem
+}
+
+localStorageFunction();
 
 /////////////////////////////////////////////////////
 // GENEL BİR ÖRNEK:
+
 // Form Html5- css3 -Bootstrap- JS -jquery
 
 
