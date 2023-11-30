@@ -1,14 +1,19 @@
-const submitForm=(event)=>{
-    //alert("submit form");
-    //event.preventDefault();
+const submitForm = (event) => {
+    // Browser sen dur bir şey  yapma ben yaparım.
+    // event.preventDefault;
 
-    let email=document.getElementById("email_id").value;
-    let password=document.getElementById("password_id").value;
-    alert("data")
+    // VALUE
+    let email="", password="";
+
+    // DOM
+    email = String(document.getElementById("email_id").value).trim();
+    password = String(document.getElementById("password_id").value).trim();
+    
+    // interpolation
     alert(`${email} => ${password}`)
 
-    localStorage.setItem("email_",email);
-    localStorage.setItem("password_",password);
-   
+    // LocalStorage
+    localStorage.setItem("email_", email);
+    localStorage.setItem("password_", password);
 }
 //submitForm()
