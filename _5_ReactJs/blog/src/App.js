@@ -17,6 +17,7 @@ function App() {
         >
           Learn React
         </a>
+        <p className="text-primary">Merhabalar</p>
       </header>
     </div>
   );

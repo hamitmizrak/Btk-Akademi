@@ -1,0 +1,11 @@
+Yarn ile Npm arasındaki farklar nelerdir ?
+-----------------------------------------------
+yarn (Eş zamanlı) npm (tek zamanda tek iş )
+
+
+
+
+--save  ikisi arasındaki farklar --save-dev
+-----------------------------------------------
+--save      : canlı ortamlarda kullanmak
+--save-dev  : test ortamlarında kullanılır.

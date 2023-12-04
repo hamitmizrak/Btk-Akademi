@@ -26,6 +26,13 @@ git push -u origin main
 npx create-react-app _5_ReactJs
 cd _5_ReactJs
 npm start
+
+NPM install
+* npm install axios              --save
+* npm install react-router-dom   --save 
+* npm install i18next            --save
+* npm i       react-i18next      --save
+
 ```
 
 ```sh
@@ -93,5 +100,17 @@ npm
 Slack
 Discord
 Yandex
+```
+
+```sh
+React Bileşenleri
+props: Bir Componentten başka bir componentte veri göndermektir.
+propTypes: props type(Tür) belirlemek
+propsDefault: Var olan değerleri göster
+class componentle: constructor  
+class componentle: constructor(super(props))  
+class componentle: state():  durum
+class componentle: setState(): durum güncellemesi
+class componentle: this keyword çok seviyor.
 ```
 
