@@ -116,5 +116,8 @@ class componentle: constructor(super(props))
 class componentle: state():  durum
 class componentle: setState(): durum güncellemesi
 class componentle: this keyword çok seviyor.
+class componentle: isimlendirmede ilk harfi büyük (PascalCase)
+
+Class
 ```
 

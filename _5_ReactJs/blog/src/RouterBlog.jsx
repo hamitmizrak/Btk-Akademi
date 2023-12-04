@@ -11,11 +11,13 @@ import Footer from './Footer';
 class RouterBlog extends Component {
     render() {
         return (
-            <div>
+            <React.Fragment>
               <Header/> 
-               <Main/>
+              <div class="container" style={{marginTop:"4rem"}}>
+              <Main/>
+              </div>
                <Footer/>
-            </div>
+            </React.Fragment>
         );
     }
 }
