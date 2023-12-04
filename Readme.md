@@ -4,7 +4,11 @@ GitLab
 
 (Link)
 > Girinti
-> 
+
+```sh
+npm -v
+node -v
+```
 
 ```sh
 npm init
@@ -32,9 +36,13 @@ npm -v
 10.1.0
 
 npm start
-npm install
+npm cache clean -f
+npm install  (node_modules tekrardan yüklemeye başlar)
+npm i
+npm i -g n  (Npm güncellemeye yarıyor.)
 npm install axios --save
 npm uninstall axios
+npm 
 ```
 
 ```sh
@@ -58,5 +66,32 @@ Class Componentte
 4- CDM
 5- CDU
 
+React JS  - React Native
+React JS Facebook geliştirildi.
+JS Librariesdir. 
+MVC V= React
+
+2011 Facebook
+
+State= Durum
+Statefull (Durumlu)  = Class    Component
+Stateless (Durumsuz) = Function Component
+
+Virtual DOM Diff Algorithm: Sadece değişen kısmı çalıştırsın diğer kısımlar zaten çalışıyor.
+
+Netflix, 
+e-bay, 
+Instagram, 
+Facebook, 
+Twitter (X) 
+Udemy
+Tesla
+Drobox
+Cloudflare
+Atlassian
+npm 
+Slack
+Discord
+Yandex
 ```
 
