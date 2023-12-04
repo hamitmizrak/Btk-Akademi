@@ -28,10 +28,14 @@ cd _5_ReactJs
 npm start
 
 NPM install
-* npm install axios              --save
-* npm install react-router-dom   --save 
-* npm install i18next            --save
-* npm i       react-i18next      --save
+npx create-react-app  blog
+cd blog
+
+npm install axios              --save
+npm install react-router-dom   --save 
+npm install i18next            --save
+npm i       react-i18next      --save
+npm start
 
 ```
 
