@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+// MAİN
 class Main extends Component {
     render() {
         return (
@@ -10,4 +11,5 @@ class Main extends Component {
     }
 }
 
+// EXPORT MAIN
 export default Main;

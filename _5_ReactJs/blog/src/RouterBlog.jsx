@@ -2,6 +2,8 @@
 // rfc
 
 import React, { Component } from 'react';
+
+// Header, Main, Footer
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
