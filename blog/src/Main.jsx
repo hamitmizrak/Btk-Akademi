@@ -26,6 +26,7 @@ class Main extends Component {
         let data= (this.props.t('about'))
         return (
             <>
+             <div id="light" className="App-header">
                <p style={{marginBottom:"15rem"}}>
                { String(data).toUpperCase().concat(" ") }
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae nihil fugit suscipit totam sint consequuntur sed est. Atque expedita quidem laudantium quis pariatur tempora ratione recusandae, labore hic maxime facere.
@@ -40,7 +41,7 @@ class Main extends Component {
                Nostrum doloribus fugiat doloremque sapiente inventore quas deserunt dolor earum rerum placeat reprehenderit in corporis ab quis, iure architecto? Earum, iusto. Ex doloremque labore provident nobis, rerum veritatis vero atque?
                son
                </p> 
-    
+               </div>
             </>
         ); //end retur
     } //end render

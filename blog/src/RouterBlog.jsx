@@ -10,12 +10,14 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
+import App from './App';
 
 // CLASS
 class RouterBlog extends Component {
     render() {
         return (
             <React.Fragment>
+
                 <Header logo="fa-brands fa-salesforce" />
 
                 <div className="container" style={{ marginTop: "4rem" }}>
@@ -29,6 +31,8 @@ class RouterBlog extends Component {
                     </Routes>
                 </div>
                 <Footer />
+
+               
             </React.Fragment>
         );
     }

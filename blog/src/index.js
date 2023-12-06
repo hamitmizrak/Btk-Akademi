@@ -19,6 +19,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 // Dil Secenegi
 import './internationalization/i18nlanguage';
+import App from './App';
 
 // ROOT
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -26,6 +27,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
         <RouterBlog/>
+        {/* <App /> */}
     </BrowserRouter>
     
   </React.StrictMode>
