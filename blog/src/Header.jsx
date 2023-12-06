@@ -26,6 +26,7 @@ class Header extends Component {
 
     // RENDER
     render() {
+        const {t}=this.props;
         return (
             <React.Fragment>
                 <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
@@ -75,7 +76,7 @@ class Header extends Component {
                                         aria-haspopup="true"
                                         aria-expanded="false"
                                     >
-                                        Diller
+                                        {t('languages')}
                                     </a>
                                     <div className="dropdown-menu" aria-labelledby="dropdownId">
                                         <OtherLanguageReusability />
@@ -89,7 +90,8 @@ class Header extends Component {
                                 <input
                                     className="form-control me-sm-2"
                                     type="text"
-                                    placeholder="Search"
+                                    // placeholder={this.props.t('search')}
+                                    placeholder={t('search')}
                                 />
                                 <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
                                     Search

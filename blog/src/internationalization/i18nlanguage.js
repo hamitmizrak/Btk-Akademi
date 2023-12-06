@@ -11,6 +11,8 @@ i18n.use(initReactI18next).init({
                    'blog':'Blog',
                    'about':'About',
                    'contact':'Contact',
+                   'search':'Search',
+                   'languages':'Languages',
                 }
             },
         tr:
@@ -20,6 +22,8 @@ i18n.use(initReactI18next).init({
                    'blog':'Blog',
                    'about':'Hakkımızda',
                    'contact':'İletişim',
+                   'search':'Arama',
+                   'languages':'Diller',
                 }
             }
     },
