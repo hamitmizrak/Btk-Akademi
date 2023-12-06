@@ -4,13 +4,22 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 
-// Router
+// RouterBlog
 import RouterBlog from './RouterBlog';
 
+// Router
+// BrowserRouter ==> http://localhost:3000/
+// HashRouter    ==> http://localhost:3000/#/
+import { BrowserRouter } from 'react-router-dom';
+
+// ROOT
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterBlog/>
+    <BrowserRouter>
+        <RouterBlog/>
+    </BrowserRouter>
+    
   </React.StrictMode>
 );
 

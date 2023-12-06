@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+// I18N
+
 
 // CLASS
 class Header extends Component {
@@ -27,7 +29,7 @@ class Header extends Component {
                 <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
                     <div className="container">
                         <a className="navbar-brand" href="#">
-                            LOGO
+                        <i class={this.props.logo}></i>
                         </a>
                         <button
                             className="navbar-toggler d-lg-none"
@@ -86,12 +88,10 @@ class Header extends Component {
                         </div>
                     </div>
                 </nav>
-
-
             </React.Fragment>
         ); //end retur
     } //end render
 } //end class
 
 // EXPORT HEADER
-export default Header;
+export default Header

@@ -31,10 +31,10 @@ NPM install
 npx create-react-app  blog
 cd blog
 
-npm install axios              --save
-npm install react-router-dom   --save 
-npm install i18next            --save
-npm i       react-i18next      --save
+npm install axios --save
+npm install react-router-dom --save 
+npm install i18next --save
+npm i react-i18next --save
 npm start
 
 ```
