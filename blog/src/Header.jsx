@@ -4,6 +4,10 @@ import React, { Component } from 'react';
 import OtherLanguageReusability from './internationalization/OtherLanguageReusability';
 import { withTranslation } from 'react-i18next';
 
+
+// Dark Mode
+import DarkMode from './DarkMode/DarkMode'
+
 // CLASS
 class Header extends Component {
 
@@ -32,7 +36,7 @@ class Header extends Component {
                 <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
                     <div className="container">
                         <a className="navbar-brand" href="#">
-                        <i class={this.props.logo}></i>
+                        <i className={this.props.logo}></i>
                         </a>
                         <button
                             className="navbar-toggler d-lg-none"
@@ -86,6 +90,16 @@ class Header extends Component {
                                     </div>
                                 </li>
                             </ul>
+
+                            {/* Dark Mode */}
+                            <ul className="navbar-nav me-auto mt-2 mt-lg-0">
+                                <li className="nav-item">
+                                    {/* dark mode */}
+                                    <DarkMode />
+                                </li>
+                            </ul>
+
+
                             <form className="d-flex my-2 my-lg-0">
                                 <input
                                     className="form-control me-sm-2"

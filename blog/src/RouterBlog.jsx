@@ -18,7 +18,7 @@ class RouterBlog extends Component {
             <React.Fragment>
                 <Header logo="fa-brands fa-salesforce" />
 
-                <div class="container" style={{ marginTop: "4rem" }}>
+                <div className="container" style={{ marginTop: "4rem" }}>
                     <Routes>
                         {/* index and root path */}
                         <Route path={"/"} element={<Main />} />

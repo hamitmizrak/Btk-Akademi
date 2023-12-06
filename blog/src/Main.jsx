@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withTranslation } from 'react-i18next';
 
 // CLASS
 class Main extends Component {
@@ -22,9 +23,12 @@ class Main extends Component {
 
     // RENDER
     render() {
+        let data= (this.props.t('about'))
         return (
             <>
-               <p style={{marginBottom:"15rem"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae nihil fugit suscipit totam sint consequuntur sed est. Atque expedita quidem laudantium quis pariatur tempora ratione recusandae, labore hic maxime facere.
+               <p style={{marginBottom:"15rem"}}>
+               { String(data).toUpperCase().concat(" ") }
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae nihil fugit suscipit totam sint consequuntur sed est. Atque expedita quidem laudantium quis pariatur tempora ratione recusandae, labore hic maxime facere.
                Optio tempore vel ad earum fugit pariatur cum non, eligendi consequatur accusamus totam quasi nulla facilis! Aut autem asperiores rerum consequatur ducimus velit, alias doloribus ipsum saepe, unde tenetur ratione.
                Blanditiis obcaecati maiores eveniet distinctio et saepe commodi accusamus dolorem, quisquam itaque provident vitae, molestias unde eum voluptatum quae fugiat mollitia ipsa recusandae, repellat minus. Iste quasi eveniet doloremque adipisci.
                Consequatur at ullam incidunt magnam porro quibusdam voluptas error suscipit deserunt. Culpa fuga commodi laboriosam, sit recusandae velit saepe eligendi aut corrupti unde error dicta aliquam facilis, ea quis maiores?
@@ -43,4 +47,4 @@ class Main extends Component {
 } //end class
 
 // EXPORT HEADER
-export default Main;
+export default withTranslation()(Main) ;

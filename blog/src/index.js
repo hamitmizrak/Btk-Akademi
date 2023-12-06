@@ -1,11 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
+// index.css
 import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 
 // RouterBlog
 import RouterBlog from './RouterBlog';
+
+// dark mode
+import './index.css';
 
 // Router
 // BrowserRouter ==> http://localhost:3000/

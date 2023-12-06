@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withTranslation } from 'react-i18next';
 
 // CLASS
 class Footer extends Component {
@@ -118,5 +119,5 @@ class Footer extends Component {
     } //end render
 } //end class
 
-// EXPORT HEADER
-export default Footer;
+// EXPORT HEADER (withTransaction)
+export default withTranslation()(Footer);
