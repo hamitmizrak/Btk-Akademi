@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 // I18N
-
+// Resuability
+import OtherLanguageReusability from './internationalization/OtherLanguageReusability';
+import { withTranslation } from 'react-i18next';
 
 // CLASS
 class Header extends Component {
@@ -15,7 +17,7 @@ class Header extends Component {
         this.state = {
 
         }
-        //BIND
+    //BIND
     }
 
     // CDM
@@ -46,12 +48,22 @@ class Header extends Component {
                             <ul className="navbar-nav me-auto mt-2 mt-lg-0">
                                 <li className="nav-item">
                                     <a className="nav-link active" href="#" aria-current="page">
-                                        Home <span className="visually-hidden">(current)</span>
+                                        {this.props.t('home_page')} <span className="visually-hidden">(current)</span>
                                     </a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="#">
-                                        Link
+                                    {this.props.t('blog')}
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#">
+                                    {this.props.t('about')}
+                                    </a>
+                                </li> 
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#">
+                                    {this.props.t('contact')}
                                     </a>
                                 </li>
                                 <li className="nav-item dropdown">
@@ -63,15 +75,13 @@ class Header extends Component {
                                         aria-haspopup="true"
                                         aria-expanded="false"
                                     >
-                                        Dropdown
+                                        Diller
                                     </a>
                                     <div className="dropdown-menu" aria-labelledby="dropdownId">
-                                        <a className="dropdown-item" href="#">
+                                        <OtherLanguageReusability />
+                                        {/* <a className="dropdown-item" href="#">
                                             Action 1
-                                        </a>
-                                        <a className="dropdown-item" href="#">
-                                            Action 2
-                                        </a>
+                                        </a> */}
                                     </div>
                                 </li>
                             </ul>
@@ -94,4 +104,4 @@ class Header extends Component {
 } //end class
 
 // EXPORT HEADER
-export default Header
+export default withTranslation()(Header) 

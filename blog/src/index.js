@@ -12,6 +12,9 @@ import RouterBlog from './RouterBlog';
 // HashRouter    ==> http://localhost:3000/#/
 import { BrowserRouter } from 'react-router-dom';
 
+// Dil Secenegi
+import './internationalization/i18nlanguage';
+
 // ROOT
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
