@@ -30,12 +30,15 @@ class Header extends Component {
 
     // RENDER
     render() {
+        /* JS Codes */
         const {t}=this.props;
         return (
             <React.Fragment>
                 <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
                     <div className="container">
-                        <a className="navbar-brand" href="#">
+                        <a 
+                        className="navbar-brand" 
+                        href={this.props.url}>
                         <i className={this.props.logo}></i>
                         </a>
                         <button
@@ -92,7 +95,13 @@ class Header extends Component {
                             </ul>
 
                             {/* Dark Mode */}
-                            <ul className="navbar-nav me-auto mt-2 mt-lg-0">
+                            <ul className="navbar-nav ms-auto me-3 mt-2 mt-lg-0">
+                                <li>deneme-1</li>
+                                <li>deneme-1</li>
+                            <li className="nav-item">
+                                    {/* dark mode */}
+                                    <OtherLanguageReusability />
+                                </li>
                                 <li className="nav-item">
                                     {/* dark mode */}
                                     <DarkMode />
@@ -108,7 +117,7 @@ class Header extends Component {
                                     placeholder={t('search')}
                                 />
                                 <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
-                                    Search
+                                {t('search')}
                                 </button>
                             </form>
                         </div>
@@ -121,3 +130,17 @@ class Header extends Component {
 
 // EXPORT HEADER
 export default withTranslation()(Header) 
+
+
+// Props Default Variables
+Header.defaultProps = {
+    url: "http://localhost:3000"
+}
+
+// Props Default Value Validation
+// Header.propTypes = {
+//     url: PropTypes.string.isRequired,
+// }
+
+
+

@@ -28,11 +28,11 @@ function OtherLanguageReusability(props) {
     //render
     return (
         <React.Fragment>
-            <Link className="dropdown-item" onClick={() => internationalizationLanguage('tr')}>
-                <img src={tr} style={{ height: "1rem" }} alt="TR" /> TR
+            <Link  onClick={() => internationalizationLanguage('tr')}>
+                <img src={tr} style={{ height: "1.4rem",marginRight:"1rem" }} alt="TR" /> 
             </Link>
-            <Link className="dropdown-item" onClick={() => internationalizationLanguage('en')}>
-                <img src={en} style={{ height: "1rem" }} alt="EN" /> EN
+            <Link  onClick={() => internationalizationLanguage('en')}>
+                <img src={en} style={{ height: "1.4rem" }} alt="EN" /> 
             </Link>
         </React.Fragment>
     ); //end return
