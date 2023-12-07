@@ -29,10 +29,10 @@ function OtherLanguageReusability(props) {
     return (
         <React.Fragment>
             <Link  onClick={() => internationalizationLanguage('tr')}>
-                <img src={tr} style={{ height: "1.4rem",marginRight:"1rem" }} alt="TR" /> 
+                <img src={tr} style={{ height: "1.2rem",marginRight:"1rem" }} alt="TR" /> 
             </Link>
             <Link  onClick={() => internationalizationLanguage('en')}>
-                <img src={en} style={{ height: "1.4rem" }} alt="EN" /> 
+                <img src={en} style={{ height: "1.2rem" }} alt="EN" /> 
             </Link>
         </React.Fragment>
     ); //end return
