@@ -1,88 +1,43 @@
 import React, { Component } from 'react';
-// 2 9 0 1 Front
-
+// I18N
 // Resuability
 import OtherLanguageReusability from '../internationalization/OtherLanguageReusability';
-
-// i18
 import { withTranslation } from 'react-i18next';
 
-// Link
-import { Link } from 'react-router-dom';
-
-// Web Page Url
-import WebPageUrl from './root/WebPageUrl';
-
-// Validation Prop
-import PropTypes from 'prop-types'
-
-/////// 
-// dark mode
-import '../dark.css';
+// Dark Mode
+import './DarkMode/dark.css';
 import DarkMode from './DarkMode/DarkMode';
 
-// Header Class
+// CLASS
 class Header extends Component {
 
-    // Display Name
-    static displayName = "Header_Project";
+    // display
+    static displayName = "Header"
 
-    // CONSTRUCTOR
+    // constructor
     constructor(props) {
         super(props);
-
         // STATE
         this.state = {
-            loading: false,
-            persons: [], // Header Search
-            searchData: "",
-        }
 
-        // BIND (Search)
-   }
+        }
+    //BIND
+    }
 
     // CDM
 
-
-    //FUNCTION
-    // Person Find
-
-    // Clear List
-
-
-    // onChangeSearch
-    // input içine bir şeyler yazdımızda almak için
- 
-
-
-    // jQuery autoComplete
-    //     $(function(){
-    //         const searchData=["adana","balikesir","ceyhan","diyarbakır","denizli","elazığ","malatya"];
-    //    $("#tags").autocomplete({
-    //     source:searchData
-    //    })
-    //     })
+    // Function
 
     // RENDER
     render() {
-
-        // object destructing
-        const { t } = this.props;
-
-        // RETURN
+        const {t}=this.props;
         return (
-
-            <header >
+            <React.Fragment>
                 <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
                     <div className="container">
-                        {/* Absolute Path */}
-                        <a
-                            className="navbar-brand"
-                            style={{ color: `#${this.props.colorObject}` }}
-                            // style={{color:"#"+this.props.colorObject}} 
-                            href={this.props.url}>
-                            <i className={this.props.logo}></i></a>
-
+                        <a className="navbar-brand" href="#">
+                        <i className={this.props.logo}></i>
+                        </a>
                         <button
                             className="navbar-toggler d-lg-none"
                             type="button"
@@ -97,15 +52,25 @@ class Header extends Component {
                         <div className="collapse navbar-collapse" id="collapsibleNavId">
                             <ul className="navbar-nav me-auto mt-2 mt-lg-0">
                                 <li className="nav-item">
-                                    {/* Root: relative Path */}
-                                    <Link className="nav-link active" to="/"><i className="fa-solid fa-house-chimney"></i> {t('home')} </Link>
+                                    <a className="nav-link active" href="#" aria-current="page">
+                                        {this.props.t('home_page')} <span className="visually-hidden">(current)</span>
+                                    </a>
                                 </li>
-                            </ul>
-
-                            {/* Register / Login */}
-                            <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
-                                {/* i18n Language */}
-
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#">
+                                    {this.props.t('blog')}
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#">
+                                    {this.props.t('about')}
+                                    </a>
+                                </li> 
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#">
+                                    {this.props.t('contact')}
+                                    </a>
+                                </li>
                                 <li className="nav-item dropdown">
                                     <a
                                         className="nav-link dropdown-toggle"
@@ -115,51 +80,15 @@ class Header extends Component {
                                         aria-haspopup="true"
                                         aria-expanded="false"
                                     >
-                                        {t('role')}
+                                        {t('languages')}
                                     </a>
-
                                     <div className="dropdown-menu" aria-labelledby="dropdownId">
-                                        <Link className="dropdown-item" to="/role/list" >{t('role_list')} </Link>
-                                        <Link className="dropdown-item" to="/role/create" >{t('role_create')} </Link>
+                                        <OtherLanguageReusability />
+                                        {/* <a className="dropdown-item" href="#">
+                                            Action 1
+                                        </a> */}
                                     </div>
                                 </li>
-                             
-                                <li className="nav-item dropdown">
-                                    <a
-                                        className="nav-link dropdown-toggle"
-                                        href="#"
-                                        id="dropdownId"
-                                        data-bs-toggle="dropdown"
-                                        aria-haspopup="true"
-                                        aria-expanded="false"
-                                    >
-                                        {t('registers')}
-                                    </a>
-
-                                    <div className="dropdown-menu" aria-labelledby="dropdownId">
-                                        <Link className="dropdown-item" to="/register/list" >{t('register_list')} </Link>
-                                        <Link className="dropdown-item" to="/register/create" >{t('register_create')} </Link>
-                                    </div>
-                                </li>
-
-                                {/* Search Form */}
-                                <form onSubmit={this.onSubmitSearch} className="d-flex my-2 my-lg-0 ">
-                                    <input
-                                        type="text"
-                                        id="tags"
-                                        className="form-control me-sm-2"
-                                        value={this.state.searchData}
-                                        onChange={this.onChangeSearch}
-                                        placeholder={t('search')}
-                                    />
-                                    <button
-                                        type="submit"
-                                        className="btn btn-outline-success my-2 my-sm-0"
-                                        onClick={this.searchClearList} >
-                                        {t('search')}
-                                    </button>
-                                </form>
-
                             </ul>
 
                             {/* Dark Mode */}
@@ -168,68 +97,27 @@ class Header extends Component {
                                     {/* dark mode */}
                                     <DarkMode />
                                 </li>
-
-
-                                <li className="nav-item dropdown">
-                                    <a
-                                        className="nav-link dropdown-toggle"
-                                        href="#"
-                                        id="dropdownId"
-                                        data-bs-toggle="dropdown"
-                                        aria-haspopup="true"
-                                        aria-expanded="false"
-                                    >
-                                        {t('language')}
-                                    </a>
-
-                                    <div className="dropdown-menu" aria-labelledby="dropdownId">
-                                        <OtherLanguageReusability />
-                                    </div>
-                                </li>
-
-                                <li className="nav-item dropdown">
-                                    <a
-                                        className="nav-link dropdown-toggle"
-                                        href="#"
-                                        id="dropdownId"
-                                        data-bs-toggle="dropdown"
-                                        aria-haspopup="true"
-                                        aria-expanded="false"
-                                    >
-                                        {t('login')}
-                                    </a>
-
-                                    <div className="dropdown-menu" aria-labelledby="dropdownId">
-                                        <Link className="dropdown-item" to="/login" >{t('login')} </Link>
-                                        <Link className="dropdown-item" to="/register/create" >{t('register')} </Link>
-                                    </div>
-                                </li>
-
                             </ul>
 
+
+                            <form className="d-flex my-2 my-lg-0">
+                                <input
+                                    className="form-control me-sm-2"
+                                    type="text"
+                                    // placeholder={this.props.t('search')}
+                                    placeholder={t('search')}
+                                />
+                                <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
+                                    Search
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </nav>
-                <span style={{ marginBottom: "2rem" }}>.</span>
-            </header>
-        ); //end return
+            </React.Fragment>
+        ); //end retur
     } //end render
 } //end class
 
-// Default Değerler
-Header.defaultProps = {
-    url: WebPageUrl.mySpecialUrl.toString(),
-    //url: String(WebPageUrl.mySpecialUrl),
-    //url: "http://localhost:3000",
-    colorObject: "abcf41"
-}
-
-// Default Validation
-Header.propTypes = {
-    url: PropTypes.string.isRequired,
-   // colorObject: PropTypes.number.isRequired
-    colorObject: PropTypes.string.isRequired
-}
-
-// Wrapper High Order (i18n)
-export default withTranslation()(Header);
+// EXPORT HEADER
+export default withTranslation()(Header) 

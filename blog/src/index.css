@@ -1,3 +1,38 @@
+*{
+  padding: 0;
+  margin:0 px;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 15px;
+}
+
+p{
+  font-size: 1.2rem;
+  text-align: justify;
+  padding-left:1.2rem;
+  padding-right:1.2rem;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+img:hover{
+  box-shadow: 1px 1px 3px 1px rgba(0,0,0,.9);
+}
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+/********************************************/
 /* dark mode */
 :root{
   --body_background:white!important;
@@ -32,3 +67,5 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/********************************************/
