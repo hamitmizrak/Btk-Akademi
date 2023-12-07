@@ -8,9 +8,11 @@ import React from 'react';
 import tr from "../image/flag/Turkish.png"
 import en from "../image/flag/English.png"
 
-// Dil secenegi
+// Dil Seçeneği
 import { withTranslation } from 'react-i18next';
 import OtherLanguageServices from "./OtherLanguageServices";
+
+// Router
 import { Link } from 'react-router-dom';
 
 //Funksiyon komponent
