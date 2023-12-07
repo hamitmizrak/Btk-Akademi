@@ -1,51 +1,47 @@
 import React, { Component } from 'react';
-import { withTranslation } from 'react-i18next';
 
-// CLASS
+// CSS
+import './main.css'
+
+// IMAGE
+import sunRise from '../image/sunrise.jpg'
+import { Link } from 'react-router-dom';
+
+// Main Class
 class Main extends Component {
 
-    // display
-    static displayName="Main"
 
-    // constructor
-    constructor(props){
+    // Display Name
+    static displayName = "Main_Project";
+
+    // CONSTRUCTOR
+    constructor(props) {
         super(props);
-        // STATE
-        this.state={
 
+        // STATE
+        this.state = {
+          
         }
-        //BIND
+        // BIND
     }
 
-    // CDM
-
-    // Function
-
-    // RENDER
+    //FUNCTION
     render() {
-        let data= (this.props.t('about'))
         return (
             <React.Fragment >
-             <div id="light">
-               <p style={{marginBottom:"15rem"}}>
-               { String(data).toUpperCase().concat(" ") }
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae nihil fugit suscipit totam sint consequuntur sed est. Atque expedita quidem laudantium quis pariatur tempora ratione recusandae, labore hic maxime facere.
-               Optio tempore vel ad earum fugit pariatur cum non, eligendi consequatur accusamus totam quasi nulla facilis! Aut autem asperiores rerum consequatur ducimus velit, alias doloribus ipsum saepe, unde tenetur ratione.
-               Blanditiis obcaecati maiores eveniet distinctio et saepe commodi accusamus dolorem, quisquam itaque provident vitae, molestias unde eum voluptatum quae fugiat mollitia ipsa recusandae, repellat minus. Iste quasi eveniet doloremque adipisci.
-               Consequatur at ullam incidunt magnam porro quibusdam voluptas error suscipit deserunt. Culpa fuga commodi laboriosam, sit recusandae velit saepe eligendi aut corrupti unde error dicta aliquam facilis, ea quis maiores?
-               Veniam, aperiam aliquid voluptates laborum fuga quaerat voluptatem dolore beatae alias ex maiores vero, culpa consequatur consequuntur, temporibus rerum nihil blanditiis? Repellendus tenetur voluptate rerum? Sed qui veniam tempora alias.
-               Sapiente beatae tempore ipsam dicta incidunt animi consequuntur consequatur ex repudiandae possimus. Eligendi dignissimos id culpa, assumenda quibusdam corrupti eos, distinctio obcaecati nisi, soluta labore accusamus. Quam magnam deserunt sapiente.
-               Consequuntur ipsa reprehenderit ab adipisci velit facere ullam est repellat deleniti iusto veritatis dolorum recusandae fugiat ea nobis suscipit voluptatum qui, incidunt porro sed? Saepe tempora atque molestiae quia soluta.
-               Tempore dignissimos, voluptates beatae et ea consectetur facilis doloremque neque iure hic, harum dolores non! Iure dolorem tempore, ipsum minus magnam saepe modi, aspernatur placeat et, omnis in dolorum vitae?
-               At, doloremque veniam velit, tempore expedita atque earum adipisci inventore a in facilis quaerat mollitia harum? Laudantium inventore doloribus repudiandae totam saepe dolore laborum. Ea cum adipisci molestias magnam consequuntur.
-               Nostrum doloribus fugiat doloremque sapiente inventore quas deserunt dolor earum rerum placeat reprehenderit in corporis ab quis, iure architecto? Earum, iusto. Ex doloremque labore provident nobis, rerum veritatis vero atque?
-               son
-               </p> 
-               </div>
-               </React.Fragment>
-        ); //end retur
+
+            <div id="light">
+                <img src={sunRise} alt="" width="100%" />
+
+                <p>lorem*40 Lorem ipsatem libero, tempora adipisci! Nam explicabo excepturi voluptas at sapiente! Voluptate porro explicabo magnam odio cum expedita voluptatum impedit vel ab.
+            </p>
+            <br />
+            <Link to="/register/list" className='btn btn-primary'>Register List</Link>
+           <br /><br /><br /><br /><br />
+           </div>
+            </React.Fragment>
+        ); // end return
     } //end render
 } //end class
 
-// EXPORT HEADER
-export default withTranslation()(Main) ;
+export default Main;

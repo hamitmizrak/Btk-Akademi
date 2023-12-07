@@ -1,13 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
-// index.css
-import './index.css';
-
 import reportWebVitals from './reportWebVitals';
 
-// RouterBlog
-import RouterBlog from './RouterBlog';
+// ROUTER
+import RouterProject from './RouterProject';
 
 // dark mode
 import './index.css';
@@ -15,24 +11,23 @@ import './index.css';
 // Dil Secenegi
 import './internationalization/i18nlanguage';
 
-// Router
-// BrowserRouter ==> http://localhost:3000/
-// HashRouter    ==> http://localhost:3000/#/
-import { BrowserRouter } from 'react-router-dom';
+// ROUTER
+// BrowserRouter  http://localhost:3000/
+// HashRouter     http://localhost:3000/#/
+import { BrowserRouter  } from 'react-router-dom';
 
-import App from './App';
-
-// ROOT
+// ROOT - DOM
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// RENDER
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-        <RouterBlog/>
-        {/* <App /> */}
+      <RouterProject /> 
+      {/* <App /> */}
     </BrowserRouter>
-    
+
   </React.StrictMode>
 );
-
 
 reportWebVitals();
