@@ -18,7 +18,7 @@ import { Link } from 'react-router-dom';
 //Funksiyon komponent
 function OtherLanguageReusability(props) {
 
-    //Bayraklar
+    // Bayraklar
     const internationalizationLanguage = language => {
         const { i18n } = props;
         i18n.changeLanguage(language);
