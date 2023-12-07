@@ -33,6 +33,7 @@ a{
 }
 
 /********************************************/
+
 /* dark mode */
 :root{
   --body_background:white!important;
@@ -50,6 +51,8 @@ a{
   transition: all 0.3 ease-in-out;
 }
 
+
+/********************************************/
 /* Body */
 body {
   margin: 0;

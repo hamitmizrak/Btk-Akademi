@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 
 // ROUTER
-import RouterProject from './RouterProject';
+import RouterBlog from './RouterBlog';
 
 // dark mode
 import './index.css';
@@ -16,6 +16,7 @@ import './internationalization/i18nlanguage';
 // HashRouter     http://localhost:3000/#/
 import { BrowserRouter  } from 'react-router-dom';
 
+
 // ROOT - DOM
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -23,10 +24,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <RouterProject /> 
+      <RouterBlog/> 
       {/* <App /> */}
     </BrowserRouter>
-
   </React.StrictMode>
 );
 
