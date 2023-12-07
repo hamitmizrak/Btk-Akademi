@@ -17,11 +17,11 @@ class Header extends Component {
     // constructor
     constructor(props) {
         super(props);
-        // STATE
-        this.state = {
 
-        }
-    //BIND
+        // STATE
+        this.state = {}
+
+        //BIND
     }
 
     // CDM
@@ -30,16 +30,157 @@ class Header extends Component {
 
     // RENDER
     render() {
+
         /* JS Codes */
-        const {t}=this.props;
+        const { t } = this.props;
+
+        /* Return */
         return (
             <React.Fragment>
-                <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+                {/* start First Navbar */}
+                <nav id="navbar_first_id" >
+                    <div class="navbar_first_class pt-2">
+                        <div class="container">
+                            <div className="row">
+                                {/* LEFT */}
+                                <div className=" col-xs-12 col-sm-6 col-md-9 col-lg-7">
+                                    <ul id="navbar_first_left" className="clearfix">
+                                        {/* Telephone */}
+                                        <li>
+                                            <a href="telephone"> <i class="fa-solid fa-mobile-screen"></i></a>
+                                        </li>
+                                        {/* mail */}
+                                        <li>
+                                            <a href="mailto:deneme@gmail.com"> <i class="fa-regular fa-envelope"></i></a>
+                                        </li>
+                                        {/* whatsapp */}
+                                        <li>
+                                            <a href="https://wa.me?'Size nasıl yardımcı olabilirim'"> <i class="fa-brands fa-whatsapp"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                {/* RIGHT */}
+                                <div className=" col-xs-12 col-sm-6 col-md-3 col-lg-5">
+                                    <ul id="navbar_first_right">
+                                        <li>
+                                            <a href="#"
+                                                type="button"
+                                                data-bs-toggle="offcanvas"
+                                                data-bs-target="#offcanvas_login"
+                                                aria-controls="offcanvasNavbar" >
+                                                    <i className="fa-solid fa-user-check text-warning"></i>
+                                                </a>
+
+                                            <a href="#"
+                                                type="button"
+                                                data-bs-toggle="offcanvas"
+                                                data-bs-target="#offcanvas_register"
+                                                aria-controls="offcanvasNavbar" ><i className="fa-solid fa-user-lock text-warning"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                {/* end   First Navbar */}
+
+                {/* start Login Off Canvas Login */}
+                <div className="container-fluid ">
+                    <div
+                        className="offcanvas offcanvas-start bg-dark text-white"
+                        tabIndex={-1}
+                        id="offcanvas_login"
+                        aria-labelledby="offcanvasNavbarLabel"
+                    >
+                        <div className="offcanvas-header">
+                            <h5 className="offcanvas-title text-danger" id="offcanvasNavbarLabel">
+                                Login
+                            </h5>
+                            <button
+                                type="button"
+                                className="btn-close text-reset"
+                                data-bs-dismiss="offcanvas"
+                                aria-label="Close"
+                            />
+                        </div>
+                        <div className="offcanvas-body">
+                            <form>
+                                <input
+                                    className="form-control me-2 mb-2"
+                                    type="email"
+                                    placeholder="email address"
+                                />
+                                <input
+                                    className="form-control me-2 mb-2"
+                                    type="password"
+                                    placeholder="password"
+                                />
+                                <button className="btn btn-outline-danger mt-2 me-2" type="reset">
+                                    Temizle
+                                </button>
+                                <button className="btn btn-outline-primary mt-2" type="submit">
+                                    Giriş Yap
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                {/* end  Login Off Canvas Login */}
+
+                {/* start Register Off Canvas Register */}
+                <div className="container-fluid ">
+                    <div
+                        className="offcanvas offcanvas-end bg-dark text-white"
+                        tabIndex={-1}
+                        id="offcanvas_register"
+                        aria-labelledby="offcanvasNavbarLabel"
+                    >
+                        <div className="offcanvas-header">
+                            <h5 className="offcanvas-title text-danger" id="offcanvasNavbarLabel">
+                                Register
+                            </h5>
+                            <button
+                                type="button"
+                                className="btn-close text-reset"
+                                data-bs-dismiss="offcanvas"
+                                aria-label="Close"
+                            />
+                        </div>
+                        <div className="offcanvas-body">
+                            <form>
+                                <input
+                                    className="form-control me-2 mb-2"
+                                    type="email"
+                                    placeholder="email address"
+                                />
+                                <input
+                                    className="form-control me-2 mb-2"
+                                    type="password"
+                                    placeholder="password"
+                                />
+                                <button className="btn btn-outline-danger mt-2 me-2" type="reset">
+                                    Temizle
+                                </button>
+                                <button className="btn btn-outline-primary mt-2" type="submit">
+                                    Giriş Yap
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                {/* end Register Off Canvas Login */}
+
+
+                {/* start Second Navbar */}
+                <nav 
+                id="navbar_second_id" 
+                className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
                     <div className="container">
-                        <a 
-                        className="navbar-brand" 
-                        href={this.props.url}>
-                        <i className={this.props.logo}></i>
+                        <a
+                            className="navbar-brand"
+                            href={this.props.url}>
+                            <i className={this.props.logo}></i>
                         </a>
                         <button
                             className="navbar-toggler d-lg-none"
@@ -61,17 +202,17 @@ class Header extends Component {
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="#">
-                                    {this.props.t('blog')}
+                                        {this.props.t('blog')}
                                     </a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="#">
-                                    {this.props.t('about')}
+                                        {this.props.t('about')}
                                     </a>
-                                </li> 
+                                </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="#">
-                                    {this.props.t('contact')}
+                                        {this.props.t('contact')}
                                     </a>
                                 </li>
                                 <li className="nav-item dropdown">
@@ -96,7 +237,7 @@ class Header extends Component {
 
                             {/* Dark Mode */}
                             <ul className="navbar-nav ms-auto me-3 mt-2 mt-lg-0">
-                            <li className="nav-item">
+                                <li className="nav-item">
                                     {/* dark mode */}
                                     <OtherLanguageReusability />
                                 </li>
@@ -115,19 +256,20 @@ class Header extends Component {
                                     placeholder={t('search')}
                                 />
                                 <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
-                                {t('search')}
+                                    {t('search')}
                                 </button>
                             </form>
                         </div>
                     </div>
                 </nav>
+                {/* end Second Navbar */}
             </React.Fragment>
         ); //end retur
     } //end render
 } //end class
 
 // EXPORT HEADER
-export default withTranslation()(Header) 
+export default withTranslation()(Header)
 
 
 // Props Default Variables

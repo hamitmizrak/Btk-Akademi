@@ -27,7 +27,7 @@ class Main extends Component {
         return (
             <React.Fragment >
              <div>
-               <p className="line-clamp10" style={{marginBottom:"15rem", marginTop:"5rem"}}>
+               <p className="line-clamp101" style={{marginBottom:"15rem", marginTop:"5rem"}}>
                { String(data).toUpperCase().concat(" ") }
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae nihil fugit suscipit totam sint consequuntur sed est. Atque expedita quidem laudantium quis pariatur tempora ratione recusandae, labore hic maxime facere.
                Optio tempore vel ad earum fugit pariatur cum non, eligendi consequatur accusamus totam quasi nulla facilis! Aut autem asperiores rerum consequatur ducimus velit, alias doloribus ipsum saepe, unde tenetur ratione.
