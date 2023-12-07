@@ -96,8 +96,6 @@ class Header extends Component {
 
                             {/* Dark Mode */}
                             <ul className="navbar-nav ms-auto me-3 mt-2 mt-lg-0">
-                                <li>deneme-1</li>
-                                <li>deneme-1</li>
                             <li className="nav-item">
                                     {/* dark mode */}
                                     <OtherLanguageReusability />

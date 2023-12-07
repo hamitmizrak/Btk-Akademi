@@ -11,6 +11,7 @@ import { withTranslation } from 'react-i18next';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
+import BlogPage from './components/blog/BlogPage';
 
 // CLASS
 class RouterBlog extends Component {
@@ -23,19 +24,24 @@ class RouterBlog extends Component {
                 <Header logo="fa-brands fa-salesforce" />
 
                 {/* ROUTING */}
-                {/* dark mode */}
                 {/* dark mode:App-header */}
                 <div className='container mt-5 App-header'>
                     <Routes>
+
                         {/* index and root path */}
                         <Route path={"/"} element={<Main />} />
                         <Route path={"/index"} element={<Main />} />
 
-                        {/* Bad Request */}
+                        {/* Blog */}
+                        <Route path={"/blog"} element={<BlogPage />} />
+ 
                         {/*OTHER PATH*/}
+                        {/* Bad Request */}
                         <Route path={"*"} element={<Navigate to="/" />} />
                     </Routes>
                 </div>
+
+                {/* FOOTER */}
                 <Footer />
             </div>
         );// end return 

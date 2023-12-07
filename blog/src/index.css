@@ -1,3 +1,31 @@
+/*
+Project Made Date: December 7 Thursday 2023
+Project Made By: hamit Mızrak
+Project Made For: 2023
+Project Made With: HTML, CSS, JS, React, Node.js, Express.js, MongoDB, Mongoose, Redux, React-Redux, Redux-Thunk, React-Router-Dom, React-Icons, React-Bootstrap, React-Toastify, React-Quill, React-Image-File-Resizer, React-Image-Gallery, React-Player, React-Share, React-Countup, React-Chartjs-2, React-Datepicker,
+Project Version: v1.0.0
+Project Status: Completed
+Project Description: This is a blog website. You can create, read, update and delete posts. You can also create, read, update and delete categories. You can also create, read, update and delete comments. You can also create, read, update and delete users. You can also create, read, update and delete contact messages. You can also create, read, update and delete about me. You can also create, read, update and delete social media links. You can also create, read, update and delete images. You can also create, read, update and delete videos. You can also create, read, update and delete files. You can also create, read, update and delete audios. You can also create, read, update and delete links. You can also create, read, update and delete tags. You can also create, read, update and delete pages. You can also create, read, update and delete menus. You can also create, read, update and delete menu items. You can also create, read, update and delete menu item links.
+Project Website: https://hamitmizrakblog.herokuapp.com/
+Project Source:
+*/
+/***** ROOT **********************************************************************/
+:root{
+  --template-bg:#414141;
+  --template-color:#e3e3e3;
+  --header-vh:150vh;
+  --max-width: 100%;
+  --light:#f8f9fa;
+  --dark:#343a40;
+  --danger:#dc3545;
+  --success:#28a745;
+  --warning:#ffc107;
+  --info:#17a2b8;
+  --primary:#007bff;
+  --secondary:#6c757d;
+}
+
+/***** COMMON **********************************************************************/
 *{
   padding: 0;
   margin:0 px;
@@ -6,6 +34,24 @@
 
 html{
   font-size: 15px;
+}
+
+body{
+  background-color: var(--body_background);
+  color: var(--body_color);
+  position:relative;
+  line-height: 1.6;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 400!important;
+  font-size: 1rem!important;
+}
+
+ul{
+  text-decoration: none;
+}
+
+ul{
+  list-style-type: none;
 }
 
 p{
@@ -24,33 +70,79 @@ img:hover{
   box-shadow: 1px 1px 3px 1px rgba(0,0,0,.9);
 }
 
-ul{
-  list-style-type: none;
+i{
+  font-size: 1.5rem;
+  opacity:0.9
 }
 
-a{
-  text-decoration: none;
+.my_clearfix::after{
+  content: "";
+  display: table;
+  clear: both;
 }
 
-/********************************************/
+/***** Line Clamp **********************************************************************/
+.line-clamp5{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical; 
+
+  display: -moz-box;   /* firefox,safari, chrome,opera,Edge */
+  -moz-line-clamp: 3;
+  -moz-box-orient: vertical;
+}
+
+.line-clamp8{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical; 
+
+  display: -moz-box;   /* firefox,safari, chrome,opera,Edge */
+  -moz-line-clamp: 3;
+  -moz-box-orient: vertical;
+}
+
+.line-clamp10{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical; 
+
+  display: -moz-box;   /* firefox,safari, chrome,opera,Edge */
+  -moz-line-clamp: 3;
+  -moz-box-orient: vertical;
+}
+.line-clamp15{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 15;
+  -webkit-box-orient: vertical; 
+
+  display: -moz-box;   /* firefox,safari, chrome,opera,Edge */
+  -moz-line-clamp: 3;
+  -moz-box-orient: vertical;
+}
+
+/***** Dark Mode **********************************************************************/
 
 /* dark mode */
-:root{
-  --body_background:white!important;
-  --body_color:black!important;
-}
+ :root{
+  --body_background:#e3e3e3!important;
+  --body_color:#414141!important;
+} 
 
 /* dark mode */
 [data-theme="dark"]{
-  --body_background:black!important;
-  --body_color:white!important;
+  --body_background:#414141!important;
+  --body_color:#e3e3e3!important;
 }
 
 /* dark mode */
 *{
   transition: all 0.3 ease-in-out;
 }
-
 
 /********************************************/
 /* Body */
