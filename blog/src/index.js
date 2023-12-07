@@ -12,13 +12,14 @@ import RouterBlog from './RouterBlog';
 // dark mode
 import './index.css';
 
+// Dil Secenegi
+import './internationalization/i18nlanguage';
+
 // Router
 // BrowserRouter ==> http://localhost:3000/
 // HashRouter    ==> http://localhost:3000/#/
 import { BrowserRouter } from 'react-router-dom';
 
-// Dil Secenegi
-import './internationalization/i18nlanguage';
 import App from './App';
 
 // ROOT

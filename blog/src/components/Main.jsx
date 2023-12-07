@@ -25,8 +25,8 @@ class Main extends Component {
     render() {
         let data= (this.props.t('about'))
         return (
-            <>
-             <div id="light" className="App-header">
+            <React.Fragment >
+             <div id="light">
                <p style={{marginBottom:"15rem"}}>
                { String(data).toUpperCase().concat(" ") }
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae nihil fugit suscipit totam sint consequuntur sed est. Atque expedita quidem laudantium quis pariatur tempora ratione recusandae, labore hic maxime facere.
@@ -42,7 +42,7 @@ class Main extends Component {
                son
                </p> 
                </div>
-            </>
+               </React.Fragment>
         ); //end retur
     } //end render
 } //end class

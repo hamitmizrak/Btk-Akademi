@@ -1,70 +1,175 @@
-# Getting Started with Create React App
+## Google Chrome Plugin
+- React Developer Tools: https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
+- React Redux DevTools : https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+---------------------------------------------------------------------------------------------------------------------------
+## React 
+- 2011 yılında Facebook tarafından geliştirildi.
+- Open source (Açık kaynak kodludur)
+- React ES6
+- Facebook, Whatsapp, Instagram, Netflix, BBC, Uber, Tesla, CloudFlare, ...
+- SPA bir yapıya sahiptir.
+- Reusability
+- MVC M:Java View: React JS
+- React'ta herşey nesnedir.
+- Stateless: Durumsuz (State yoktur) Function Component: useState()
+- Stafull  : Durumlu  (State vardır) Class Component: this.state={} this.setState({})
+- Virtual DOM: Yazdığımız yeni kodları görüp hemen çalıştırmaya yarar (Virtual Dom Diff Algoritması)
 
-In the project directory, you can run:
+---------------------------------------------------------------------------------------------------------------------------
+## Bilinmesi Gerekenler 
+- Babel   : ES5 ve üstündeki sürümleri ES5'e compiler yapıyor.
+- WebPack : Uygulamamızı tek bir JS dosyası haline getirebiliyor. 
 
-### `npm start`
+---------------------------------------------------------------------------------------------------------------------------
+## React Life Cycle
+- constructor
+- Render
+- CDM  (ComponentDidMound)     Servis /Api hazırlık
+- CDU  (ComponentDidUpdate)    Componentlerin güncellenmesinde kullanıyoruz.
+- CWUM (ComponentWillUnMount)  Componentlerin içeriklerini temizleme.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---------------------------------------------------------------------------------------------------------------------------
+## React Kurulumu
+npx create-react-app blog
+cd blog
+npm start
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---------------------------------------------------------------------------------------------------------------------------
+## package.json
+npm install axios               --save       (Froentend ile backent arasında veri alış verişini sağlıyor)
+npm install react-router-dom    --save       (Sayfalar arasında geçiş)
+npm install i18next             --save       (Dil için)
+npm install react-i18next       --save       (Dil için)
+npm install redux react-redux   --save       (Auth)
+npm install redux-thunk         --save       (middle Ware : Ara katman )
+npm install secure-ls           --save       (Local Storageta bilgileri saklamak istioyrsak)
 
-### `npm test`
+DİKKAT: react ile react-dom aynı sürüm olmalıdır.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-- OTHER-- 
+npm install bootstrap --save      (Bootstrap kullanmak için)
+npm install node-sass --save      (Sass kullanmak için)
+npm install jquery --save          (Jquery Kullanmak Icin)
+npm install popper.js --save        (Popper Js Kullanmak Icin)
+npm install @popperjs/core --save   (Popper Js Kullanmak Icin)
+npm install fontawesome --save      (Font Awesome Kullanmak Icin)
+npm install sweetalert2 --save      (Alert ve Confirm Kullanmak Icin)
+npm install moment --save          (Tarih Saat Formatlarını Değiştirmek Icin)
+npm install lodash --save          (Array, Object gibi işler yapmanız için)
+npm install node-sass --save       (Scss dosyalarını sass olarak dönüştürmen
+npm install nodemon            --save-dev    (Backend için)
 
-### `npm run build`
+---------------------------------------------------------------------------------------------------------------------------
+## package.json
+npm uninstall axios 
+npm uninstall react-router-dom 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---------------------------------------------------------------------------------------------------------------------------
+## package.json 
+{
+  "name": "frontend_11",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.5.1",
+    "i18next": "^23.5.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^13.3.0",
+    "react-redux": "^8.1.3",
+    "react-router-dom": "^6.16.0",
+    "react-scripts": "5.0.1",
+    "redux": "^4.2.1",
+    "redux-thunk": "^2.4.2",
+    "secure-ls": "^1.2.6",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://localhost:4444/"
+}
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npm i
+proxy: DNS değiştirildiğinde hızlıca entegre edebilmek içindir.
 
-### `npm run eject`
+---------------------------------------------------------------------------------------------------------------------------
+## HTML+CSS+JS                               JSX
+for                                         HtmlFor
+style="background-color:black"              style={{backgroundColor:"black"}}
+class                                       className
+onclick                                     onClick
+tag                                         tag kapanışa dikkat
+/* */                                       {/* */}
+<div> </div>                                <></>
+{ }                                         {}
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+JSX: Javascript XML (Js in Html)
+JSX: Reactta söz dizimidir.
+JSX: React elementleri oluşturmaya yarar.
+Reactta JSX'e erişebiliriz.
+import logo from './logo.svg'; // Import edildi
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---------------------------------------------------------------------------------------------------------------------------
+# Html To JSX
+Transform: https://transform.tools/html-to-jsx
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+---------------------------------------------------------------------------------------------------------------------------
+# .gitignore
+/node_modules
+/build
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---------------------------------------------------------------------------------------------------------------------------
+Props: (Basit Ölçekli uygulama veya basit veri gönderimi)
+- Basit uygulamaya örnek: bir kaç tane componentler(fuction, class) varsa bu kategoriye yerleştirebilirz.
+- Bir Componenttten başka bir omponentte veri göndermenin en kolay yoludur. 
+- Ancak veri göndermek kolay verileri yönetmek zordur.
+- key value olarak çalışıyor.
+- classlarda constructor yardımıyla handling ediyoruz. constructor(props){super(props)}
+- functionlarda parametre yardımıyla alıyoruz ==> function Header({t, i18n, props})
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Context API: (Orta Ölçekli uygulamalarda)
+- Orta uygulamaya örnek:  componentler(fuction, class) sayısı fazla olmaya başlıyorsa varsa bu kategoriye yerleştirebilirz.
+- Her bir componentte görünmesini istediğiniz verileri varsa bunu kullanabilirsiniz 
+- yani Provider ile tüm state tutan component ile sağlayabiliriz.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Redux: (Büyük Ölçekli uygulamalarda)
+- Büyük uygulamaya örnek:  componentler(fuction, class) sayısı fazla olmaya başlıyorsa varsa bu kategoriye yerleştirebilirz.
+- yani Provider ile tüm state tutan component ile sağlayabiliriz.
 
-### Making a Progressive Web App
+Prop drilling: Küçük uygulamalarda (props) bir compontten başka bir componentte oradan başka bir componentte veri göndermek istiyorsak bunu kullanıyoruz
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

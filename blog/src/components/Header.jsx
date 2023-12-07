@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 // I18N
 // Resuability
-import OtherLanguageReusability from './internationalization/OtherLanguageReusability';
+import OtherLanguageReusability from '../internationalization/OtherLanguageReusability';
 import { withTranslation } from 'react-i18next';
 
 
 // Dark Mode
 import DarkMode from './DarkMode/DarkMode'
+import '../dark.css';
 
 // CLASS
 class Header extends Component {
