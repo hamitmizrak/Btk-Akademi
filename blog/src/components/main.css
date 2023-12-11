@@ -1,9 +1,9 @@
 header{
     background-image: url('../../img/office.jpg');
-    height: 110vh;
+    height: 100vh;
     background-size: cover;
     background-position: center;
-    padding-top: 8rem;
+    padding-top: 1rem;
     z-index: -1;
     opacity: 0.9;
 }

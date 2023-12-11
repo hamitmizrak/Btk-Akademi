@@ -201,7 +201,12 @@ class Header extends Component {
                                     </a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">
+                                    <a className="nav-link" href="#services_id">
+                                        {this.props.t('services')}
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#blog_id">
                                         {this.props.t('blog')}
                                     </a>
                                 </li>

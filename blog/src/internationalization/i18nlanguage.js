@@ -13,6 +13,7 @@ i18n.use(initReactI18next).init({
                    'contact':'Contact',
                    'search':'Search',
                    'languages':'Languages',
+                   'services':'Services',
                 }
             },
         tr:
@@ -24,6 +25,7 @@ i18n.use(initReactI18next).init({
                    'contact':'İletişim',
                    'search':'Arama',
                    'languages':'Diller',
+                   'services':'Servisler',
                 }
             }
     },
