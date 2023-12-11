@@ -69,6 +69,13 @@ header{
     padding:2rem;
 }
 
+/* CONTACT */
+#contact_id{
+    margin-bottom: 4rem;
+    margin-top: 8rem;
+    padding:3rem .1rem;
+}
+
 /*BACK TO TOP*/
 #backToTop{
     position: fixed;
