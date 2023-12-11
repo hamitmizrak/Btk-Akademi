@@ -25,7 +25,7 @@ class RouterBlog extends Component {
 
                 {/* ROUTING */}
                 {/* dark mode:App-header */}
-                <div className='container mt-5 App-header'>
+                <div className='container-fluid App-header'>
                     <Routes>
 
                         {/* index and root path */}
