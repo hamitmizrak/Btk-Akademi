@@ -57,3 +57,14 @@ header{
 #blog_id .blog_service .card-body h4,p{
    color:black;
 }
+
+/* ABOUT */
+#about_id{
+    background-image: url("../image/office.jpg");
+    background-color: transparent;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 40rem;
+    padding:2rem;
+}

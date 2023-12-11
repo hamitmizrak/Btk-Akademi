@@ -206,6 +206,31 @@ class Main extends Component {
                     {/* end blog */}
 
 
+                        {/* start about_id */}
+                        <section id="about_id">
+                        <div className="about_service">
+                            <h2 className='text-center text-white'> About Me</h2>
+                            <div className="container">
+                                <div className="row">
+                                    <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xxl-12">
+                                        <i class="fa-solid fa-blog text-center"></i>
+                                        <p className='line-clamp15  text-white'> About Me Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni atque harum amet, quo obcaecati explicabo sit consequuntur nobis eveniet quas dolorem iusto officiis ut molestias ex maxime enim dolores culpa.
+                                        Delectus nostrum eligendi, adipisci molestias nihil, eos quas veniam praesentium in quae earum facere fugiat aliquid. Velit nobis laboriosam, qui tempora modi vitae. Explicabo amet voluptate at dolores asperiores quos?
+                                        Mollitia asperiores, molestias minus quas quam reprehenderit placeat? Cupiditate debitis eaque, quod ipsam molestias vel officiis hic facilis sapiente consequuntur quidem ea voluptates incidunt tenetur. Consequatur eos vel ad mollitia.
+                                        Esse accusantium nostrum quisquam in et facilis consequuntur, voluptatibus neque, fuga harum officiis praesentium molestiae deserunt culpa eius eveniet. At possimus sequi labore earum eos, impedit debitis animi esse sint.
+                                        Sequi necessitatibus nostrum unde sapiente, labore obcaecati maxime accusantium nobis odit corporis odio excepturi vel quod quibusdam ullam omnis! Tenetur perferendis temporibus quod harum quis praesentium corporis vitae, officiis eum.
+                                        Expedita impedit molestias natus adipisci, placeat ab nihil, dolorum consequuntur, neque praesentium nisi illo in perferendis voluptatum error ex unde temporibus doloremque voluptatibus voluptas sequi modi cupiditate tenetur nulla? Sed?
+                                        Deleniti animi illo ut natus incidunt architecto, repellat blanditiis error necessitatibus repudiandae? Similique dolorem error tenetur itaque iure mollitia voluptatibus cum officiis aliquam nisi. Ullam libero consectetur dolorem quis amet!
+                                        Dignissimos saepe, ex eos tempore quaerat provident illo aliquam, sit doloremque accusamus expedita nulla. Tempore, harum quas suscipit voluptatem aspernatur voluptas, praesentium facere quidem eligendi accusamus itaque, laborum dolorem modi?
+                                        Laudantium quod quas incidunt possimus consequatur corporis qui optio tempore dolorum hic ad error molestiae at, esse exercitationem impedit ex. Laborum et beatae dolore exercitationem, illum obcaecati. Beatae, voluptates tenetur?
+                                        Consequatur quia nam doloribus odit reprehenderit odio, dignissimos quibusdam autem architecto sed praesentium, temporibus nulla aspernatur ad magni deleniti. Autem laudantium totam ratione maiores unde deleniti officia aspernatur, at voluptatum! Blog page Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nam ratione necessitatibus dicta eos deleniti consequatur. Nostrum corrupti, dicta, vel consequuntur error, recusandae itaque nobis ducimus neque possimus aliquid odit?</p>
+                                   <button className="btn btn-outline-primary text-cente">More ...</button>
+                                    </div>
+                                </div> {/* end row */}
+                            </div>{/* end container */}
+                        </div>{/* end about services */}
+                    </section>  {/* end about services */}
+                  
                 </main>
                 {/* end codes Main  */}
 
