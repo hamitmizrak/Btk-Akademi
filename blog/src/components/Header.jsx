@@ -7,6 +7,7 @@ import { withTranslation } from 'react-i18next';
 // Dark Mode
 import './DarkMode/dark.css';
 import DarkMode from './DarkMode/DarkMode';
+import { Link } from 'react-router-dom';
 
 // CLASS
 class Header extends Component {
@@ -244,7 +245,7 @@ class Header extends Component {
                                         {this.props.t('contact')}
                                     </a>
                                 </li>
-                                {/* <li className="nav-item dropdown">
+                                <li className="nav-item dropdown">
                                     <a
                                         className="nav-link dropdown-toggle"
                                         href="#"
@@ -253,15 +254,15 @@ class Header extends Component {
                                         aria-haspopup="true"
                                         aria-expanded="false"
                                     >
-                                        {t('languages')}
+                                        {t('register')}
                                     </a>
                                      <div className="dropdown-menu" aria-labelledby="dropdownId">
-                                        <OtherLanguageReusability />
-                                         <a className="dropdown-item" href="#">
-                                            Action 1
-                                        </a> 
+                                         
+                                         <Link to="/register/list" className="dropdown-item" href="#">
+                                            {t('register_list')}
+                                        </Link> 
                                     </div> 
-                                </li> */}
+                                </li> 
                             </ul>
 
                             {/* Dark Mode */}

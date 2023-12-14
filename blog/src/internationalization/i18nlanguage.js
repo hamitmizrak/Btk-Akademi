@@ -25,6 +25,9 @@ i18n.use(initReactI18next).init({
                    'update':'Update',
                    'view':'View',
                    'delete':'Delete',
+                   'register_list':"Register List",
+                   'register_update':"Register Update",
+                   'register_view':"Register View"
                 }
             },
         tr:
@@ -48,6 +51,9 @@ i18n.use(initReactI18next).init({
                    'update':'Güncelle',
                    'view':'Göster',
                    'delete':'Sil',
+                   'register_list':"Kayıt Listesi",
+                   'register_update':"Kayıt Güncelle",
+                   'register_view':"Kayıtları Göster"
                    
                 }
             }
