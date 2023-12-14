@@ -24,10 +24,16 @@ function RegisterList({ t, i18n, props }) {
         setRefleshAndSetApiList()
     }, []);
 
+
+    // Persist Mock api Link
+    const persistMockApiLink =()=>{
+        return "https://657ae453394ca9e4af12f9c6.mockapi.io/api/v1/blog/register"
+    }
+
     // FUNCTION
     // REFLESH AND SET API LIST
     const setRefleshAndSetApiList = () => {
-        axios.get("https://657ae453394ca9e4af12f9c6.mockapi.io/api/v1/blog/register")
+        axios.get(persistMockApiLink())
             .then((response) => {
                 console.log(response);
                 if (response.status === 200) {
@@ -43,7 +49,8 @@ function RegisterList({ t, i18n, props }) {
     // DELETE
     const setDeleteMockApi = (id) => {
         if (window.confirm("Are you sure you want to delete?")) {
-            axios.delete(`https://657ae453394ca9e4af12f9c6.mockapi.io/api/v1/blog/register/${id}`)
+            // axios.delete(persistMockApiLink()+`/${id}`)
+            axios.delete(`${persistMockApiLink()}/${id}`)
                 .then(() => {
                     setRefleshAndSetApiList();
                     // navigate("/register/list")
