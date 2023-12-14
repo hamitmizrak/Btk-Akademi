@@ -7,7 +7,7 @@ import { withTranslation } from 'react-i18next'
 // Navigate
 import { Link, useNavigate } from 'react-router-dom'
 
-//Axios
+// Axios
 import axios from 'axios';
 
 // Function 
@@ -21,12 +21,12 @@ function RegisterList({ t, i18n, props }) {
 
     // USE EFFECT 
     useEffect(() => {
-        setReflesh()
+        setRefleshAndSetApiList()
     }, []);
 
     // FUNCTION
-
-    const setReflesh = () => {
+    // REFLESH AND SET API LIST
+    const setRefleshAndSetApiList = () => {
         axios.get("https://657ae453394ca9e4af12f9c6.mockapi.io/api/v1/blog/register")
             .then((response) => {
                 console.log(response);
@@ -38,14 +38,14 @@ function RegisterList({ t, i18n, props }) {
             .catch((err) => {
                 console.error(err);
             });
-    };
+    }; //end setRefleshAndSetApiList
 
     // DELETE
     const setDeleteMockApi = (id) => {
         if (window.confirm("Are you sure you want to delete?")) {
             axios.delete(`https://657ae453394ca9e4af12f9c6.mockapi.io/api/v1/blog/register/${id}`)
                 .then(() => {
-                    setReflesh();
+                    setRefleshAndSetApiList();
                     // navigate("/register/list")
                 })
                 .catch((err) => {
@@ -54,7 +54,19 @@ function RegisterList({ t, i18n, props }) {
         } else {
             window.alert("dont delete")
         }
-    }
+    }; //end delete
+
+
+    // setUpdateLocalStorage
+    const setUpdateLocalStorage = (id) => {
+        localStorage.setItem("updateId", id);
+    } //end setUpdateLocalStorage
+
+
+    // setViewLocalStorage
+    const setViewLocalStorage = (id) => {
+        localStorage.setItem("viewId", id);
+    } //end setViewLocalStorage
 
     // RETURN
     return (
@@ -62,9 +74,7 @@ function RegisterList({ t, i18n, props }) {
             <h1 className='text-center text-primary display-4 mt-5 mb-5 text-uppercase shadow'>{t('register')} List</h1>
             <Link to="/register/create" className='btn btn-primary mb-2'>{t('register')}</Link>
 
-            <div
-                className="table-responsive-md"
-            >
+            <div className="table-responsive-md" >
                 <table
                     className="table table-primary table-striped table-hover table-bordered"
                 >
@@ -93,16 +103,30 @@ function RegisterList({ t, i18n, props }) {
                                         <td>{item.password}</td>
                                         <td>{item.systemCreatedDate}</td>
                                         <td>
-                                            <Link to={`/register/update/${item.id}`}>
-                                                <i style={{ "cursor": "pointer" }} className="fa-solid fa-pen-nib text-primary"></i>
+                                            <Link
+                                                onClick={() => setUpdateLocalStorage(item.id)}
+                                                to={`/register/update/${item.id}`}>
+                                                <i
+                                                    style={{ "cursor": "pointer" }}
+                                                    className="fa-solid fa-pen-nib text-primary"></i>
                                             </Link>
                                         </td>
                                         <td>
-                                            <Link to={`/register/view/${item.id}`}>
-                                                <i style={{ "cursor": "pointer" }} className="fa-solid fa-binoculars text-success"></i>
+                                            <Link
+                                                onClick={() => setViewLocalStorage(item.id)}
+                                                to={`/register/view/${item.id}`}>
+                                                <i
+                                                    style={{ "cursor": "pointer" }}
+                                                    className="fa-solid fa-binoculars text-success"></i>
                                             </Link>
                                         </td>
-                                        <td><i onClick={() => setDeleteMockApi(item.id)} style={{ "cursor": "pointer" }} className="fa-solid fa-trash text-danger ms-3"></i></td>
+                                        <td>
+                                            <i
+                                                onClick={() => setDeleteMockApi(item.id)}
+                                                style={{ "cursor": "pointer" }}
+                                                className="fa-solid fa-trash text-danger ms-3">
+                                            </i>
+                                        </td>
                                     </tr>
 
                                 )
