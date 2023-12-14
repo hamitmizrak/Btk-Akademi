@@ -22,6 +22,9 @@ i18n.use(initReactI18next).init({
                    'email':'Email Address',
                    'password':'Password',
                    'systemCreatedDate':'System Created Date',
+                   'update':'Update',
+                   'view':'View',
+                   'delete':'Delete',
                 }
             },
         tr:
@@ -42,6 +45,10 @@ i18n.use(initReactI18next).init({
                    'email':'Email Addres',
                    'password':'Şifre',
                    'systemCreatedDate':'Tarih',
+                   'update':'Güncelle',
+                   'view':'Göster',
+                   'delete':'Sil',
+                   
                 }
             }
     },

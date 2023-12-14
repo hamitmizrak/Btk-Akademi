@@ -32,7 +32,7 @@ function RegisterList({ t, i18n, props }) {
             .catch((err) => {
                 console.error(err);
             });
-    },[]);
+    }, []);
 
     // RETURN
     return (
@@ -52,14 +52,33 @@ function RegisterList({ t, i18n, props }) {
                             <th scope="col">{t('email')}</th>
                             <th scope="col">{t('password')}</th>
                             <th scope="col">{t('systemCreatedDate')}</th>
+                            <th scope="col">{t('update')}</th>
+                            <th scope="col">{t('view')}</th>
+                            <th scope="col">{t('delete')}</th>
                         </tr>
                     </thead>
                     <tbody>
-                       
+                        {
+                            MockApi.map((item) => {
+                                return (
+                                    <tr key={item.id}>
+                                        <td>{item.id}</td>
+                                        <td>{item.username}</td>
+                                        <td>{item.surname}</td>
+                                        <td>{item.email}</td>
+                                        <td>{item.password}</td>
+                                        <td>{item.systemCreatedDate}</td>
+                                        <td><i style={{ "cursor": "pointer" }} className="fa-solid fa-pen-nib text-primary ms-3"></i></td>
+                                        <td><i style={{ "cursor": "pointer" }} className="fa-solid fa-binoculars text-success ms-3"></i></td>
+                                        <td><i style={{ "cursor": "pointer" }} className="fa-solid fa-trash text-danger ms-3"></i></td>
+                                    </tr>
+                                )
+                            }) //end map
+                        }
                     </tbody>
                 </table>
             </div>
-            
+
         </React.Fragment>
     ) //end return
 }//end function
