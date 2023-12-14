@@ -14,6 +14,13 @@ i18n.use(initReactI18next).init({
                    'search':'Search',
                    'languages':'Languages',
                    'services':'Services',
+                   'register':'Register',
+                   'cleaner':'Cleaner',
+                   'added':'Added',
+                   'username':'Username',
+                   'surname':'Surname',
+                   'email':'Email Address',
+                   'password':'Password',
                 }
             },
         tr:
@@ -26,6 +33,13 @@ i18n.use(initReactI18next).init({
                    'search':'Arama',
                    'languages':'Diller',
                    'services':'Servisler',
+                   'cleaner':'Temizle',
+                   'added':'Ekle',
+                   'register':'Kayıt Ol',
+                   'username':'Kullanıcı Adı',
+                   'surname':'Kullanıcı Soyadı',
+                   'email':'Email Addres',
+                   'password':'Şifre',
                 }
             }
     },

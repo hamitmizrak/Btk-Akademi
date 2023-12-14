@@ -138,7 +138,7 @@ class Header extends Component {
                     >
                         <div className="offcanvas-header">
                             <h5 className="offcanvas-title text-danger" id="offcanvasNavbarLabel">
-                                Register
+                                {t('register')}
                             </h5>
                             <button
                                 type="button"
@@ -154,17 +154,17 @@ class Header extends Component {
                                     type="uname"
                                     id="uname"
                                     name="uname"
-                                    title="username"
-                                    placeholder="Username"
+                                    title={t('username')}
+                                    placeholder={t('username')}
                                 />
 
                                 <input
                                     className="form-control me-2 mb-2"
                                     type="usurname"
-                                    id="uname"
-                                    name="uname"
-                                    title="username"
-                                    placeholder="Surname"
+                                    id="usurname"
+                                    name="usurname"
+                                    title={t('surname')}
+                                    placeholder={t('surname')}
                                 />
 
                                 <input
@@ -172,22 +172,22 @@ class Header extends Component {
                                     type="email"
                                     id="uemail"
                                     name="uemail"
-                                    title="email"
-                                    placeholder="email address"
+                                    title={t('email')}
+                                    placeholder={t('email')}
                                 />
                                 <input
                                     className="form-control me-2 mb-2"
                                     type="password"
                                     id="upassword"
                                     name="upassword"
-                                    title="password"
-                                    placeholder="password"
+                                    title={t('password')}
+                                    placeholder={t('password')}
                                 />
                                 <button className="btn btn-outline-danger mt-2 me-2" type="reset">
-                                    Temizle
+                                {t('cleaner')}
                                 </button>
                                 <button className="btn btn-outline-primary mt-2" type="submit">
-                                    Giriş Yap
+                                {t('added')}
                                 </button>
                             </form>
                         </div>
