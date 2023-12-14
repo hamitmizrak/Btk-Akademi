@@ -21,6 +21,7 @@ i18n.use(initReactI18next).init({
                    'surname':'Surname',
                    'email':'Email Address',
                    'password':'Password',
+                   'systemCreatedDate':'System Created Date',
                 }
             },
         tr:
@@ -40,6 +41,7 @@ i18n.use(initReactI18next).init({
                    'surname':'Kullanıcı Soyadı',
                    'email':'Email Addres',
                    'password':'Şifre',
+                   'systemCreatedDate':'Tarih',
                 }
             }
     },

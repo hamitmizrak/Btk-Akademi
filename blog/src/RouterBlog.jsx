@@ -12,6 +12,7 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import BlogPage from './components/blog/BlogPage';
+import RegisterList from './components/register/RegisterList';
 
 // CLASS
 class RouterBlog extends Component {
@@ -34,6 +35,9 @@ class RouterBlog extends Component {
 
                         {/* Blog */}
                         <Route path={"/blog"} element={<BlogPage />} />
+
+                            {/* Blog */}
+                            <Route path={"/register/list"} element={<RegisterList />} />
  
                         {/*OTHER PATH*/}
                         {/* Bad Request */}
