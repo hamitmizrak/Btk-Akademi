@@ -68,8 +68,8 @@ class Header extends Component {
                                                 data-bs-toggle="offcanvas"
                                                 data-bs-target="#offcanvas_login"
                                                 aria-controls="offcanvasNavbar" >
-                                                    <i className="fa-solid fa-user-check text-warning"></i>
-                                                </a>
+                                                <i className="fa-solid fa-user-check text-warning"></i>
+                                            </a>
 
                                             <a href="#"
                                                 type="button"
@@ -151,12 +151,36 @@ class Header extends Component {
                             <form>
                                 <input
                                     className="form-control me-2 mb-2"
+                                    type="uname"
+                                    id="uname"
+                                    name="uname"
+                                    title="username"
+                                    placeholder="Username"
+                                />
+
+                                <input
+                                    className="form-control me-2 mb-2"
+                                    type="usurname"
+                                    id="uname"
+                                    name="uname"
+                                    title="username"
+                                    placeholder="Surname"
+                                />
+
+                                <input
+                                    className="form-control me-2 mb-2"
                                     type="email"
+                                    id="uemail"
+                                    name="uemail"
+                                    title="email"
                                     placeholder="email address"
                                 />
                                 <input
                                     className="form-control me-2 mb-2"
                                     type="password"
+                                    id="upassword"
+                                    name="upassword"
+                                    title="password"
                                     placeholder="password"
                                 />
                                 <button className="btn btn-outline-danger mt-2 me-2" type="reset">
@@ -173,9 +197,9 @@ class Header extends Component {
 
 
                 {/* start Second Navbar */}
-                <nav 
-                id="navbar_second_id" 
-                className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+                <nav
+                    id="navbar_second_id"
+                    className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
                     <div className="container">
                         <a
                             className="navbar-brand"
