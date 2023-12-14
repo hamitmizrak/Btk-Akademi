@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react'
 import { withTranslation } from 'react-i18next'
 
 // Navigate
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 //Axios
 import axios from 'axios';
@@ -17,10 +17,16 @@ function RegisterList({ t, i18n, props }) {
     let navigate = useNavigate();
 
     // STATE
-    let [MockApi, setMockApi] = useState([]);
+    let [getMockApi, setMockApi] = useState([]);
 
     // USE EFFECT 
     useEffect(() => {
+        setReflesh()
+    }, []);
+
+    // FUNCTION
+
+    const setReflesh = () => {
         axios.get("https://657ae453394ca9e4af12f9c6.mockapi.io/api/v1/blog/register")
             .then((response) => {
                 console.log(response);
@@ -32,12 +38,30 @@ function RegisterList({ t, i18n, props }) {
             .catch((err) => {
                 console.error(err);
             });
-    }, []);
+    };
+
+    // DELETE
+    const setDeleteMockApi = (id) => {
+        if (window.confirm("Are you sure you want to delete?")) {
+            axios.delete(`https://657ae453394ca9e4af12f9c6.mockapi.io/api/v1/blog/register/${id}`)
+                .then(() => {
+                    setReflesh();
+                    // navigate("/register/list")
+                })
+                .catch((err) => {
+                    console.error(err);
+                })
+        } else {
+            window.alert("dont delete")
+        }
+    }
 
     // RETURN
     return (
         <React.Fragment>
             <h1 className='text-center text-primary display-4 mt-5 mb-5 text-uppercase shadow'>{t('register')} List</h1>
+            <Link to="/register/create" className='btn btn-primary mb-2'>{t('register')}</Link>
+
             <div
                 className="table-responsive-md"
             >
@@ -45,7 +69,7 @@ function RegisterList({ t, i18n, props }) {
                     className="table table-primary table-striped table-hover table-bordered"
                 >
                     <thead>
-                        <tr>
+                        <tr className="text-center">
                             <th scope="col">ID</th>
                             <th scope="col">{t('username')}</th>
                             <th scope="col">{t('surname')}</th>
@@ -59,26 +83,34 @@ function RegisterList({ t, i18n, props }) {
                     </thead>
                     <tbody>
                         {
-                            MockApi.map((item) => {
+                            getMockApi.map((item) => {
                                 return (
-                                    <tr key={item.id}>
+                                    <tr key={item.id} className="text-center">
                                         <td>{item.id}</td>
                                         <td>{item.username}</td>
                                         <td>{item.surname}</td>
                                         <td>{item.email}</td>
                                         <td>{item.password}</td>
                                         <td>{item.systemCreatedDate}</td>
-                                        <td><i style={{ "cursor": "pointer" }} className="fa-solid fa-pen-nib text-primary ms-3"></i></td>
-                                        <td><i style={{ "cursor": "pointer" }} className="fa-solid fa-binoculars text-success ms-3"></i></td>
-                                        <td><i style={{ "cursor": "pointer" }} className="fa-solid fa-trash text-danger ms-3"></i></td>
+                                        <td>
+                                            <Link to={`/register/update/${item.id}`}>
+                                                <i style={{ "cursor": "pointer" }} className="fa-solid fa-pen-nib text-primary"></i>
+                                            </Link>
+                                        </td>
+                                        <td>
+                                            <Link to={`/register/view/${item.id}`}>
+                                                <i style={{ "cursor": "pointer" }} className="fa-solid fa-binoculars text-success"></i>
+                                            </Link>
+                                        </td>
+                                        <td><i onClick={() => setDeleteMockApi(item.id)} style={{ "cursor": "pointer" }} className="fa-solid fa-trash text-danger ms-3"></i></td>
                                     </tr>
+
                                 )
                             }) //end map
                         }
                     </tbody>
                 </table>
             </div>
-
         </React.Fragment>
     ) //end return
 }//end function
