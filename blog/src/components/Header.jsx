@@ -7,6 +7,7 @@ import { withTranslation } from 'react-i18next';
 // Dark Mode
 import './DarkMode/dark.css';
 import DarkMode from './DarkMode/DarkMode';
+import { Link } from 'react-router-dom';
 
 // CLASS
 class Header extends Component {
@@ -39,23 +40,23 @@ class Header extends Component {
             <React.Fragment>
                 {/* start First Navbar */}
                 <nav id="navbar_first_id" >
-                    <div class="navbar_first_class pt-2">
-                        <div class="container">
+                    <div className="navbar_first_class pt-2">
+                        <div className="container">
                             <div className="row">
                                 {/* LEFT */}
                                 <div className=" col-xs-12 col-sm-6 col-md-9 col-lg-7">
                                     <ul id="navbar_first_left" className="clearfix">
                                         {/* Telephone */}
                                         <li>
-                                            <a href="telephone"> <i class="fa-solid fa-mobile-screen"></i></a>
+                                            <a href="telephone"> <i className="fa-solid fa-mobile-screen"></i></a>
                                         </li>
                                         {/* mail */}
                                         <li>
-                                            <a href="mailto:deneme@gmail.com"> <i class="fa-regular fa-envelope"></i></a>
+                                            <a href="mailto:deneme@gmail.com"> <i className="fa-regular fa-envelope"></i></a>
                                         </li>
                                         {/* whatsapp */}
                                         <li>
-                                            <a href="https://wa.me?'Size nasıl yardımcı olabilirim'"> <i class="fa-brands fa-whatsapp"></i></a>
+                                            <a href="https://wa.me?'Size nasıl yardımcı olabilirim'"> <i className="fa-brands fa-whatsapp"></i></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -68,8 +69,8 @@ class Header extends Component {
                                                 data-bs-toggle="offcanvas"
                                                 data-bs-target="#offcanvas_login"
                                                 aria-controls="offcanvasNavbar" >
-                                                    <i className="fa-solid fa-user-check text-warning"></i>
-                                                </a>
+                                                <i className="fa-solid fa-user-check text-warning"></i>
+                                            </a>
 
                                             <a href="#"
                                                 type="button"
@@ -95,7 +96,7 @@ class Header extends Component {
                     >
                         <div className="offcanvas-header">
                             <h5 className="offcanvas-title text-danger" id="offcanvasNavbarLabel">
-                                Login
+                                {t('login')}
                             </h5>
                             <button
                                 type="button"
@@ -117,10 +118,10 @@ class Header extends Component {
                                     placeholder="password"
                                 />
                                 <button className="btn btn-outline-danger mt-2 me-2" type="reset">
-                                    Temizle
+                                {t('cleaner')}
                                 </button>
                                 <button className="btn btn-outline-primary mt-2" type="submit">
-                                    Giriş Yap
+                                {t('added')}
                                 </button>
                             </form>
                         </div>
@@ -138,7 +139,7 @@ class Header extends Component {
                     >
                         <div className="offcanvas-header">
                             <h5 className="offcanvas-title text-danger" id="offcanvasNavbarLabel">
-                                Register
+                                {t('register')}
                             </h5>
                             <button
                                 type="button"
@@ -151,19 +152,43 @@ class Header extends Component {
                             <form>
                                 <input
                                     className="form-control me-2 mb-2"
+                                    type="uname"
+                                    id="uname"
+                                    name="uname"
+                                    title={t('username')}
+                                    placeholder={t('username')}
+                                />
+
+                                <input
+                                    className="form-control me-2 mb-2"
+                                    type="usurname"
+                                    id="usurname"
+                                    name="usurname"
+                                    title={t('surname')}
+                                    placeholder={t('surname')}
+                                />
+
+                                <input
+                                    className="form-control me-2 mb-2"
                                     type="email"
-                                    placeholder="email address"
+                                    id="uemail"
+                                    name="uemail"
+                                    title={t('email')}
+                                    placeholder={t('email')}
                                 />
                                 <input
                                     className="form-control me-2 mb-2"
                                     type="password"
-                                    placeholder="password"
+                                    id="upassword"
+                                    name="upassword"
+                                    title={t('password')}
+                                    placeholder={t('password')}
                                 />
                                 <button className="btn btn-outline-danger mt-2 me-2" type="reset">
-                                    Temizle
+                                {t('cleaner')}
                                 </button>
                                 <button className="btn btn-outline-primary mt-2" type="submit">
-                                    Giriş Yap
+                                {t('added')}
                                 </button>
                             </form>
                         </div>
@@ -173,9 +198,9 @@ class Header extends Component {
 
 
                 {/* start Second Navbar */}
-                <nav 
-                id="navbar_second_id" 
-                className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+                <nav
+                    id="navbar_second_id"
+                    className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
                     <div className="container">
                         <a
                             className="navbar-brand"
@@ -201,17 +226,22 @@ class Header extends Component {
                                     </a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">
+                                    <a className="nav-link" href="#services_id">
+                                        {this.props.t('services')}
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#blog_id">
                                         {this.props.t('blog')}
                                     </a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">
+                                    <a className="nav-link" href="#about_id">
                                         {this.props.t('about')}
                                     </a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">
+                                    <a className="nav-link" href="#contact_id">
                                         {this.props.t('contact')}
                                     </a>
                                 </li>
@@ -224,15 +254,15 @@ class Header extends Component {
                                         aria-haspopup="true"
                                         aria-expanded="false"
                                     >
-                                        {t('languages')}
+                                        {t('register')}
                                     </a>
-                                    <div className="dropdown-menu" aria-labelledby="dropdownId">
-                                        <OtherLanguageReusability />
-                                        {/* <a className="dropdown-item" href="#">
-                                            Action 1
-                                        </a> */}
-                                    </div>
-                                </li>
+                                     <div className="dropdown-menu" aria-labelledby="dropdownId">
+                                         
+                                         <Link to="/register/list" className="dropdown-item" href="#">
+                                            {t('register_list')}
+                                        </Link> 
+                                    </div> 
+                                </li> 
                             </ul>
 
                             {/* Dark Mode */}
@@ -246,7 +276,6 @@ class Header extends Component {
                                     <DarkMode />
                                 </li>
                             </ul>
-
 
                             <form className="d-flex my-2 my-lg-0">
                                 <input

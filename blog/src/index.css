@@ -56,12 +56,12 @@ ul {
   list-style-type: none;
 }
 
-p {
+/* p {
   font-size: 1.2rem;
   text-align: justify;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
-}
+} */
 
 img {
   max-width: 100%;
@@ -84,6 +84,17 @@ i {
 }
 
 /***** Line Clamp **********************************************************************/
+.line-clamp4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+
+  display: -moz-box;
+  /* firefox,safari, chrome,opera,Edge */
+  -moz-line-clamp: 4;
+  -moz-box-orient: vertical;
+}
 .line-clamp5 {
   overflow: hidden;
   display: -webkit-box;
@@ -92,7 +103,7 @@ i {
 
   display: -moz-box;
   /* firefox,safari, chrome,opera,Edge */
-  -moz-line-clamp: 3;
+  -moz-line-clamp: 5;
   -moz-box-orient: vertical;
 }
 
@@ -104,7 +115,7 @@ i {
 
   display: -moz-box;
   /* firefox,safari, chrome,opera,Edge */
-  -moz-line-clamp: 3;
+  -moz-line-clamp: 8;
   -moz-box-orient: vertical;
 }
 
@@ -116,7 +127,7 @@ i {
 
   display: -moz-box;
   /* firefox,safari, chrome,opera,Edge */
-  -moz-line-clamp: 3;
+  -moz-line-clamp: 10;
   -moz-box-orient: vertical;
 }
 
@@ -128,7 +139,7 @@ i {
 
   display: -moz-box;
   /* firefox,safari, chrome,opera,Edge */
-  -moz-line-clamp: 3;
+  -moz-line-clamp: 15;
   -moz-box-orient: vertical;
 }
 
