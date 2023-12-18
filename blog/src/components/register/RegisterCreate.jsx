@@ -24,6 +24,8 @@ function RegisterCreate({ t, i18n, props }) {
   */
 
   // STATE 
+  // Dikkat: username,surname,email,password mutlaka api attributes aynı olmalıdır.
+  // Dikkat: username,surname,email,password mutlaka input içindeki id ve name bu isimlerde olmalıdır.
   const [username, setUsername] = useState(null);
   const [surname, setSurname] = useState(null);
   const [email, setEmail] = useState(null);
@@ -65,6 +67,13 @@ function RegisterCreate({ t, i18n, props }) {
     setPassword(value)
   }
 
+  const registerCleaner =()=>{
+    setUsername(null)
+    setSurname(null)
+    setEmail(null)
+    setPassword(null)
+  }
+
   // ON SUBMIT EVENT
   const onSubmitForm = (e) => {
     e.preventDefault();
@@ -72,7 +81,6 @@ function RegisterCreate({ t, i18n, props }) {
 
   // CREATE
   const registerCreate = async (event) => {
-
     const registerCreateForm = {
       username,
       surname,
@@ -82,25 +90,14 @@ function RegisterCreate({ t, i18n, props }) {
 
     try {
       const response = await axios.post(persistMockApiLink(), registerCreateForm)
-      if (response.status == 200) {
+      console.log(response)
+      if (response.status == 201) {
         alert("Eklendi.")
+        navigate("/register/list")
       }
     } catch (err) {
       console.error(err);
     }
-
-    axios.post(persistMockApiLink(), {
-      username,
-      surname,
-      email,
-      password,
-    }).then((response) => {
-      if (response.status == "200") {
-        navigate("/register/list")
-      }
-    }).catch((err) => {
-      console.error(err);
-    });
   }
 
   // RETURN
@@ -113,7 +110,7 @@ function RegisterCreate({ t, i18n, props }) {
           </div>
 
           <div className="col-xs-12 col-md-8 col-lg-8">
-            <form>
+            <form onSubmit={onSubmitForm}>
               <input
                 className="form-control me-2 mb-2"
                 type="text"
@@ -121,8 +118,9 @@ function RegisterCreate({ t, i18n, props }) {
                 name="username"
                 title={t('username')}
                 placeholder={t('username')}
-                // onChange={(event) => { setName(event.target.value) }}
-                onChange={registerSurnameOnChange}
+                 onChange={(event) => { setUsername(event.target.value) }}
+                //onChange={registerUsernameOnChange}
+                required={true}
               />
 
               <input
@@ -134,9 +132,8 @@ function RegisterCreate({ t, i18n, props }) {
                 placeholder={t('surname')}
                 // onChange={(event) => { setSurname(event.target.value) }}
                 onChange={registerSurnameOnChange}
-
+                required={true}
               />
-
 
               <input
                 className="form-control me-2 mb-2"
@@ -147,8 +144,9 @@ function RegisterCreate({ t, i18n, props }) {
                 placeholder={t('email')}
                 // onChange={(event) => { setEmail(event.target.value) }}
                 onChange={registerEmailOnChange}
-
+                required={true}
               />
+
               <input
                 className="form-control me-2 mb-2"
                 type="password"
@@ -158,16 +156,20 @@ function RegisterCreate({ t, i18n, props }) {
                 placeholder={t('password')}
                 // onChange={(event) => { setPassword(event.target.value) }}
                 onChange={registerPasswordOnChange}
-
+                required={true}
               />
-              <button className="btn btn-outline-danger mt-2 me-2 mb-3" type="reset">
+              <button 
+              type="reset"
+              className="btn btn-outline-danger mt-2 me-2 mb-3"
+              onClick={registerCleaner}
+              >
                 {t('cleaner')}
               </button>
 
               <button
                 type="submit"
                 className="btn btn-outline-primary mt-2 mb-3"
-                onClick={registerCreate()}
+                onClick={registerCreate}
               >
                 {t('added')}
               </button>
