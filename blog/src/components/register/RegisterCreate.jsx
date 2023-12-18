@@ -17,7 +17,7 @@ function RegisterCreate({ t, i18n, props }) {
   let navigate = useNavigate();
 
   // STATE 
-  const [name, setUsername] = useState('');
+  const [name, setName] = useState('');
   const [surname, setSurname] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -36,18 +36,15 @@ function RegisterCreate({ t, i18n, props }) {
 
   // CREATE
   const registerCreate = () => {
-    // axios.post(persistMockApiLink(), {
-    axios.post("https://657ae453394ca9e4af12f9c6.mockapi.io/api/v1/blog/register", {
+     axios.post(persistMockApiLink(), {
       name,
       surname,
       email,
       password,
     }).then((response) => {
-      alert("Başarılı")
-      navigate("/register/list")
-      // if (response.status === 200) {
-      //   navigate("/register/list")
-      // }
+      if (response.status === 200) {
+        navigate("/register/list")
+      }
     }).catch((err) => {
       console.error(err);
     });
@@ -63,7 +60,7 @@ function RegisterCreate({ t, i18n, props }) {
           </div>
 
           <div className="col-xs-12 col-md-8 col-lg-8">
-            <form>
+            <form >
               <input
                 className="form-control me-2 mb-2"
                 type="text"
@@ -71,7 +68,7 @@ function RegisterCreate({ t, i18n, props }) {
                 name="name"
                 title={t('username')}
                 placeholder={t('username')}
-                onChange={(event)=>{setUsername(event.target.value)}}
+                onChange={(event)=>{setName(event.target.value)}}
               />
 
               <input
@@ -109,7 +106,7 @@ function RegisterCreate({ t, i18n, props }) {
               <button  
               type="submit"
               className="btn btn-outline-primary mt-2 mb-3" 
-              onClick={registerCreate}
+              onClick={registerCreate()}
               >
                 {t('added')}
               </button>
@@ -118,7 +115,6 @@ function RegisterCreate({ t, i18n, props }) {
 
         </div>
       </div>
-
 
     </React.Fragment>
   ) //end return
