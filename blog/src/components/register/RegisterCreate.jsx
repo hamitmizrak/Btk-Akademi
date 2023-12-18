@@ -30,7 +30,10 @@ function RegisterCreate({ t, i18n, props }) {
   const [surname, setSurname] = useState(null);
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
+  // Çoklu isteği kapatmak
   const [multipleRequest, setMultipleRequest] = useState(false);
+  // spinner
+  const [spinner, setSpinner] = useState(false);
 
   // USE EFFECT 
   // useEffect(() => {
