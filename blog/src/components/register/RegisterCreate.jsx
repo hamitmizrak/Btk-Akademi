@@ -16,11 +16,18 @@ function RegisterCreate({ t, i18n, props }) {
   // REDIRECT
   let navigate = useNavigate();
 
+  /*
+      "username": "username 4",
+    "surname": "surname 4",
+    "email": "email 4",
+    "password": "password 4",
+  */
+
   // STATE 
-  const [name, setName] = useState('');
-  const [surname, setSurname] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState(null);
+  const [surname, setSurname] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
 
   // USE EFFECT 
   // useEffect(() => {
@@ -34,15 +41,61 @@ function RegisterCreate({ t, i18n, props }) {
     return "https://657ae453394ca9e4af12f9c6.mockapi.io/api/v1/blog/register"
   }
 
+
+  // registerNameOnChange
+  const registerUsernameOnChange = (event) => {
+    const { name, value } = event.target;
+    setUsername(value)
+  }
+
+  // registerSurnameOnChange
+  const registerSurnameOnChange = (event) => {
+    const { name, value } = event.target;
+    setSurname(value)
+  }
+
+  // registerEmailOnChange
+  const registerEmailOnChange = (event) => {
+    const { name, value } = event.target;
+    setEmail(value)
+  }
+  // registerPasswordOnChange
+  const registerPasswordOnChange = (event) => {
+    const { name, value } = event.target;
+    setPassword(value)
+  }
+
+  // ON SUBMIT EVENT
+  const onSubmitForm = (e) => {
+    e.preventDefault();
+  }
+
   // CREATE
-  const registerCreate = () => {
-     axios.post(persistMockApiLink(), {
-      name,
+  const registerCreate = async (event) => {
+
+    const registerCreateForm = {
+      username,
+      surname,
+      email,
+      password
+    };
+
+    try {
+      const response = await axios.post(persistMockApiLink(), registerCreateForm)
+      if (response.status == 200) {
+        alert("Eklendi.")
+      }
+    } catch (err) {
+      console.error(err);
+    }
+
+    axios.post(persistMockApiLink(), {
+      username,
       surname,
       email,
       password,
     }).then((response) => {
-      if (response.status === 200) {
+      if (response.status == "200") {
         navigate("/register/list")
       }
     }).catch((err) => {
@@ -60,15 +113,16 @@ function RegisterCreate({ t, i18n, props }) {
           </div>
 
           <div className="col-xs-12 col-md-8 col-lg-8">
-            <form >
+            <form>
               <input
                 className="form-control me-2 mb-2"
                 type="text"
-                id="name"
-                name="name"
+                id="username"
+                name="username"
                 title={t('username')}
                 placeholder={t('username')}
-                onChange={(event)=>{setName(event.target.value)}}
+                // onChange={(event) => { setName(event.target.value) }}
+                onChange={registerSurnameOnChange}
               />
 
               <input
@@ -78,8 +132,11 @@ function RegisterCreate({ t, i18n, props }) {
                 name="surname"
                 title={t('surname')}
                 placeholder={t('surname')}
-                onChange={(event)=>{setSurname(event.target.value)}}
+                // onChange={(event) => { setSurname(event.target.value) }}
+                onChange={registerSurnameOnChange}
+
               />
+
 
               <input
                 className="form-control me-2 mb-2"
@@ -88,7 +145,9 @@ function RegisterCreate({ t, i18n, props }) {
                 name="email"
                 title={t('email')}
                 placeholder={t('email')}
-                onChange={(event)=>{setEmail(event.target.value)}}
+                // onChange={(event) => { setEmail(event.target.value) }}
+                onChange={registerEmailOnChange}
+
               />
               <input
                 className="form-control me-2 mb-2"
@@ -97,16 +156,18 @@ function RegisterCreate({ t, i18n, props }) {
                 name="password"
                 title={t('password')}
                 placeholder={t('password')}
-                onChange={(event)=>{setPassword(event.target.value)}}
+                // onChange={(event) => { setPassword(event.target.value) }}
+                onChange={registerPasswordOnChange}
+
               />
               <button className="btn btn-outline-danger mt-2 me-2 mb-3" type="reset">
                 {t('cleaner')}
               </button>
 
-              <button  
-              type="submit"
-              className="btn btn-outline-primary mt-2 mb-3" 
-              onClick={registerCreate()}
+              <button
+                type="submit"
+                className="btn btn-outline-primary mt-2 mb-3"
+                onClick={registerCreate()}
               >
                 {t('added')}
               </button>
