@@ -30,6 +30,7 @@ function RegisterCreate({ t, i18n, props }) {
   const [surname, setSurname] = useState(null);
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
+  const [multipleRequest, setMultipleRequest] = useState(false);
 
   // USE EFFECT 
   // useEffect(() => {
@@ -67,7 +68,7 @@ function RegisterCreate({ t, i18n, props }) {
     setPassword(value)
   }
 
-  const registerCleaner =()=>{
+  const registerCleaner = () => {
     setUsername(null)
     setSurname(null)
     setEmail(null)
@@ -88,15 +89,28 @@ function RegisterCreate({ t, i18n, props }) {
       password
     };
 
+    // Çoklu isteğe izin ver
+    setMultipleRequest(true);
+
+    // API
     try {
       const response = await axios.post(persistMockApiLink(), registerCreateForm)
       console.log(response)
       if (response.status == 201) {
-        alert("Eklendi.")
+        // Çoklu isteğe izin ver
+        setMultipleRequest(false);
+
+        // Alert
+        alert("Kayıt Eklendi.");
+
+        // Navigate
         navigate("/register/list")
       }
     } catch (err) {
       console.error(err);
+
+       // Çoklu isteğe izin ver
+       setMultipleRequest(false);
     }
   }
 
@@ -118,7 +132,7 @@ function RegisterCreate({ t, i18n, props }) {
                 name="username"
                 title={t('username')}
                 placeholder={t('username')}
-                 onChange={(event) => { setUsername(event.target.value) }}
+                onChange={(event) => { setUsername(event.target.value) }}
                 //onChange={registerUsernameOnChange}
                 required={true}
               />
@@ -158,18 +172,21 @@ function RegisterCreate({ t, i18n, props }) {
                 onChange={registerPasswordOnChange}
                 required={true}
               />
-              <button 
-              type="reset"
-              className="btn btn-outline-danger mt-2 me-2 mb-3"
-              onClick={registerCleaner}
+              <button
+                type="reset"
+                //className="btn btn-outline-danger mt-2 me-2 mb-3"
+                className="btn btn-danger mt-2 me-2 mb-3"
+                onClick={registerCleaner}
               >
                 {t('cleaner')}
               </button>
 
               <button
                 type="submit"
-                className="btn btn-outline-primary mt-2 mb-3"
+                // className="btn btn-outline-primary mt-2 mb-3"
+                className="btn btn-primary mt-2 mb-3"
                 onClick={registerCreate}
+                disabled={multipleRequest}
               >
                 {t('added')}
               </button>
@@ -185,10 +202,10 @@ function RegisterCreate({ t, i18n, props }) {
 
 
 // EXPORT
-export default withTranslation()(RegisterCreate) 
+export default withTranslation()(RegisterCreate)
 
 // multiple request
 // spinner
 // update
-// view 
+// view
 // Alert
