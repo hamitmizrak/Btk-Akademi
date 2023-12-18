@@ -186,3 +186,9 @@ function RegisterCreate({ t, i18n, props }) {
 
 // EXPORT
 export default withTranslation()(RegisterCreate) 
+
+// multiple request
+// spinner
+// update
+// view 
+// Alert
