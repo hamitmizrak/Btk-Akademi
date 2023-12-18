@@ -109,8 +109,8 @@ function RegisterCreate({ t, i18n, props }) {
     } catch (err) {
       console.error(err);
 
-       // Çoklu isteğe izin ver
-       setMultipleRequest(false);
+      // Çoklu isteğe izin ver
+      setMultipleRequest(false);
     }
   }
 
@@ -188,11 +188,15 @@ function RegisterCreate({ t, i18n, props }) {
                 onClick={registerCreate}
                 disabled={multipleRequest}
               >
+
+                <div class="spinner-border text-warning" style={{ fontSize: "0.5rem" }} role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+
                 {t('added')}
               </button>
             </form>
           </div>
-
         </div>
       </div>
 
@@ -204,7 +208,6 @@ function RegisterCreate({ t, i18n, props }) {
 // EXPORT
 export default withTranslation()(RegisterCreate)
 
-// multiple request
 // spinner
 // update
 // view
