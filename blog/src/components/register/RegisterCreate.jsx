@@ -95,13 +95,20 @@ function RegisterCreate({ t, i18n, props }) {
     // Çoklu isteğe izin ver
     setMultipleRequest(true);
 
+    //  Spinner
+    setSpinner(true);
+
     // API
     try {
       const response = await axios.post(persistMockApiLink(), registerCreateForm)
       console.log(response)
       if (response.status == 201) {
+
         // Çoklu isteğe izin ver
-        setMultipleRequest(false);
+        setMultipleRequest(true);
+
+        //  Spinner
+        setSpinner(false);
 
         // Alert
         alert("Kayıt Eklendi.");
@@ -114,6 +121,9 @@ function RegisterCreate({ t, i18n, props }) {
 
       // Çoklu isteğe izin ver
       setMultipleRequest(false);
+
+      //  Spinner
+      setSpinner(true);
     }
   }
 
@@ -192,9 +202,10 @@ function RegisterCreate({ t, i18n, props }) {
                 disabled={multipleRequest}
               >
 
-                <div class="spinner-border text-warning" style={{ fontSize: "0.5rem" }} role="status">
-                  <span class="sr-only">Loading...</span>
-                </div>
+{
+  spinner ? <div class="spinner-border text-warning" style={{ fontSize: "0.5rem" }} role="status"> </div> : ''
+}
+                
 
                 {t('added')}
               </button>
