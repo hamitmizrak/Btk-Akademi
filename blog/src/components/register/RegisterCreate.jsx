@@ -16,13 +16,6 @@ function RegisterCreate({ t, i18n, props }) {
   // REDIRECT
   let navigate = useNavigate();
 
-  /*
-      "username": "username 4",
-    "surname": "surname 4",
-    "email": "email 4",
-    "password": "password 4",
-  */
-
   // STATE 
   // Dikkat: username,surname,email,password mutlaka api attributes aynı olmalıdır.
   // Dikkat: username,surname,email,password mutlaka input içindeki id ve name bu isimlerde olmalıdır.
@@ -309,7 +302,4 @@ function RegisterCreate({ t, i18n, props }) {
 // EXPORT
 export default withTranslation()(RegisterCreate)
 
-// spinner
-// update
-// view
 // Alert
