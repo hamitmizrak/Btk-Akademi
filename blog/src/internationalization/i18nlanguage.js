@@ -17,6 +17,7 @@ i18n.use(initReactI18next).init({
                    'register':'Register',
                    'cleaner':'Cleaner',
                    'added':'Added',
+                   'updated':'Updated',
                    'username':'Username',
                    'surname':'Surname',
                    'email':'Email Address',
@@ -31,7 +32,8 @@ i18n.use(initReactI18next).init({
                    'register_create':"Register Create",
                    'is_read':"Is Read ?",
                    'close':'Close',
-                   'not_Showing':'Not Showing'
+                   'not_Showing':'Not Showing',
+                   'admin_register':'Admin'
                 }
             },
         tr:
@@ -46,6 +48,7 @@ i18n.use(initReactI18next).init({
                    'services':'Servisler',
                    'cleaner':'Temizle',
                    'added':'Ekle',
+                   'updated':'Güncelle',
                    'register':'Kayıt Ol',
                    'username':'Kullanıcı Adı',
                    'surname':'Kullanıcı Soyadı',
@@ -61,7 +64,8 @@ i18n.use(initReactI18next).init({
                    'register_create':"Kayıt Ekle",
                    'is_read':"Okunuz mu ?",
                    'close':'Kapat',
-                   'not_Showing':'Bir Daha Gösterme'
+                   'not_Showing':'Bir Daha Gösterme',
+                   'admin_register':'Admin'
                    
                 }
             }

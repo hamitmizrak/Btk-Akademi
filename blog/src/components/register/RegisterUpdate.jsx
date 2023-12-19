@@ -46,7 +46,7 @@ function RegisterUpdate({ t, i18n, props }) {
 
   useEffect(() => {
     updateFindById()
-  },[])
+  },[username])
 
   // FIND BY ID
   const updateFindById = () => {
@@ -61,7 +61,11 @@ function RegisterUpdate({ t, i18n, props }) {
     axios.get(persistMockApiLink().concat(`/${id}`)) //${updateId}
       .then((response) => {
         console.log(response.data);
-        setRegisterUpdateState(response.data);
+        const {username,surname,email,password}=response.data;
+        setUsername(username)
+        setSurname(surname)
+        setEmail(email)
+        setPassword(password)
       })
       .catch((err) => {
         console.error(err);
@@ -69,12 +73,10 @@ function RegisterUpdate({ t, i18n, props }) {
   }
 
   // FUNCTION
-
   // Persist Mock api Link
   const persistMockApiLink = () => {
     return "https://657ae453394ca9e4af12f9c6.mockapi.io/api/v1/blog/register"
   }
-
 
   // registerNameOnChange
   const registerUsernameOnChange = (event) => {
@@ -120,12 +122,6 @@ function RegisterUpdate({ t, i18n, props }) {
 
   // UPDATE
   const registerUpdate = async (event) => {
-    const registerUpdateForm = {
-      username,
-      surname,
-      email,
-      password
-    };
 
     // Çoklu isteğe izin ver
     setMultipleRequest(true);
@@ -135,10 +131,15 @@ function RegisterUpdate({ t, i18n, props }) {
 
     // API
     try {
-      const response = await axios.post(persistMockApiLink(), registerUpdateForm)
-      console.log(response)
-      if (response.status == 201) {
+      const response = await axios.put(persistMockApiLink().concat(`/${id}`),{
+      username,
+      surname,
+      email,
+      password
+      })
+      //console.log(response)
 
+      if (response.status == 200) {
         // Çoklu isteğe izin ver
         setMultipleRequest(true);
 
@@ -146,7 +147,7 @@ function RegisterUpdate({ t, i18n, props }) {
         setSpinner(false);
 
         // Alert
-        alert("Kayıt Eklendi.");
+        alert("Kayıt Güncellendi.");
 
         // Navigate
         navigate("/register/list")
@@ -170,9 +171,12 @@ function RegisterUpdate({ t, i18n, props }) {
         <div className='row'>
           <div className="col-xs-12 col-md-2 col-lg-2">
           </div>
-          {/* USERNAME */}
+
+          {/* FORM */}
           <div className="col-xs-12 col-md-8 col-lg-8">
             <form onSubmit={onSubmitForm}>
+
+              {/* USERNAME */}
               <input
                 className="form-control me-2 mb-2"
                 type="text"
@@ -180,10 +184,10 @@ function RegisterUpdate({ t, i18n, props }) {
                 name="username"
                 title={t('username')}
                 placeholder={t('username')}
-                onChange={(event) => { setUsername(event.target.value) }}
-                //onChange={registerUsernameOnChange}
+                onChange={registerUsernameOnChange}
                 required={true}
-                value={registerUpdateState.username}
+                value={username}
+                
               />
 
               {/* SURNAME */}
@@ -197,7 +201,7 @@ function RegisterUpdate({ t, i18n, props }) {
                 // onChange={(event) => { setSurname(event.target.value) }}
                 onChange={registerSurnameOnChange}
                 required={true}
-                value={registerUpdateState.surname}
+                value={surname}
               />
 
               {/* EMAİL */}
@@ -211,7 +215,7 @@ function RegisterUpdate({ t, i18n, props }) {
                 // onChange={(event) => { setEmail(event.target.value) }}
                 onChange={registerEmailOnChange}
                 required={true}
-                value={registerUpdateState.email}
+                value={email}
               />
 
               {/* PASSWORD */}
@@ -225,7 +229,7 @@ function RegisterUpdate({ t, i18n, props }) {
                 // onChange={(event) => { setPassword(event.target.value) }}
                 onChange={registerPasswordOnChange}
                 required={true}
-                value={registerUpdateState.password}
+                value={password}
               />
 
               {/* IS READ */}
@@ -309,12 +313,17 @@ function RegisterUpdate({ t, i18n, props }) {
                 // className="btn btn-outline-primary mt-2 mb-3"
                 className="btn btn-primary mt-2 mb-3"
                 onClick={registerUpdate}
-                disabled={multipleRequest }
+                disabled={multipleRequest || !isRead}
               >
 
-              
-
-                {t('added')}
+                {/* {
+                  spinner ? <div class="spinner-border text-warning" style={{ fontSize: "0.5rem" }} role="status"> </div> : ''
+                } */}
+                
+                {
+                  spinner && <div class="spinner-border text-warning" style={{ fontSize: "0.5rem" }} role="status"> </div>
+                }
+                {t('updated')}
               </button>
             </form>
           </div>
@@ -328,5 +337,3 @@ function RegisterUpdate({ t, i18n, props }) {
 
 // EXPORT
 export default withTranslation()(RegisterUpdate)
-
-// Alert

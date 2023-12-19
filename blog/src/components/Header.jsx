@@ -254,7 +254,7 @@ class Header extends Component {
                                         aria-haspopup="true"
                                         aria-expanded="false"
                                     >
-                                        {t('register')}
+                                        {t('admin_register')}
                                     </a>
                                      <div className="dropdown-menu" aria-labelledby="dropdownId">
                                          
