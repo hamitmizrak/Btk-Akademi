@@ -8,7 +8,7 @@ import React, { useEffect, useState } from 'react'
 import { withTranslation } from 'react-i18next'
 
 // Router
-import { matchPath, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 
 // FUNCTION VIEW
@@ -41,10 +41,8 @@ function RegisterView({ t, i18n, props }) {
 
     // 2.YOL (ID)
     // useParams()
-    setViewId(id)
 
     // useParams
-    //setViewId(parameterViewId.id)
     axios.get(persistMockApiLink().concat(`/${viewId}`)) //${viewId}
       .then((response) => {
         console.log(response.data);
