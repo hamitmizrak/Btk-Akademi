@@ -30,10 +30,15 @@ function RegisterCreate({ t, i18n, props }) {
   const [surname, setSurname] = useState(null);
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
+
   // Çoklu isteği kapatmak
   const [multipleRequest, setMultipleRequest] = useState(false);
+
   // spinner
   const [spinner, setSpinner] = useState(false);
+
+  // Is Read
+  const [isRead, setIsRead] = useState(false);
 
   // USE EFFECT 
   // useEffect(() => {
@@ -71,6 +76,13 @@ function RegisterCreate({ t, i18n, props }) {
     setPassword(value)
   }
 
+  // IS READ
+  const registerIsReadOnChange = (event) => {
+    //alert(event.target.checked)
+    setIsRead((event.target.checked))
+  }
+
+  // CLEANER
   const registerCleaner = () => {
     setUsername(null)
     setSurname(null)
@@ -136,6 +148,7 @@ function RegisterCreate({ t, i18n, props }) {
           <div className="col-xs-12 col-md-2 col-lg-2">
           </div>
 
+          {/* USERNAME */}
           <div className="col-xs-12 col-md-8 col-lg-8">
             <form onSubmit={onSubmitForm}>
               <input
@@ -150,6 +163,7 @@ function RegisterCreate({ t, i18n, props }) {
                 required={true}
               />
 
+              {/* SURNAME */}
               <input
                 className="form-control me-2 mb-2"
                 type="text"
@@ -162,6 +176,7 @@ function RegisterCreate({ t, i18n, props }) {
                 required={true}
               />
 
+              {/* EMAİL */}
               <input
                 className="form-control me-2 mb-2"
                 type="email"
@@ -174,6 +189,7 @@ function RegisterCreate({ t, i18n, props }) {
                 required={true}
               />
 
+              {/* PASSWORD */}
               <input
                 className="form-control me-2 mb-2"
                 type="password"
@@ -185,6 +201,86 @@ function RegisterCreate({ t, i18n, props }) {
                 onChange={registerPasswordOnChange}
                 required={true}
               />
+
+              {/* IS READ */}
+              <div className="form-check">
+                <input
+                  className="form-check-input"
+                  type="checkbox"
+                  defaultValue=""
+                  name="isRead"
+                  id="isRead"
+                  required={true}
+                  onChange={registerIsReadOnChange}
+                  defaultChecked=""
+                  title="Okunuz mu ?"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalId"
+                />
+                <label
+                  className="form-check-label"
+                  htmlFor="isRead"
+
+                >
+                  {t('is_read')}
+                </label>
+              </div>
+
+              {/* IS READ MODAL */}
+              <div
+                class="modal fade"
+                id="modalId"
+                tabindex="-1"
+                data-bs-backdrop="static"
+                data-bs-keyboard="false"
+                role="dialog"
+                aria-labelledby="modalTitleId"
+                aria-hidden="true"
+              >
+                <div
+                  class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
+                  role="document"
+                >
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="modalTitleId">
+                      {t('is_read')}
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, expedita adipisci. Id recusandae necessitatibus mollitia? Dicta, eos magni qui sint aut ab est saepe exercitationem sunt placeat eaque officiis quam?
+                    Repellat praesentium alias quasi voluptas voluptate veritatis! Illum deleniti fugit tenetur eius molestiae aspernatur facilis vero veritatis, a esse ducimus dolorum maiores quasi, nesciunt enim repellendus facere, quam vel accusamus?</div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        {t('close')}
+                      </button>
+                      <button type="button" class="btn btn-primary"> {t('not_Showing')}</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <script>
+                const myModal = new bootstrap.Modal(
+                document.getElementById("modalId"),
+                options,
+                );
+              </script>
+
+
+
+
+              {/* RESET-SUBMIT */}
               <button
                 type="reset"
                 //className="btn btn-outline-danger mt-2 me-2 mb-3"
@@ -199,13 +295,13 @@ function RegisterCreate({ t, i18n, props }) {
                 // className="btn btn-outline-primary mt-2 mb-3"
                 className="btn btn-primary mt-2 mb-3"
                 onClick={registerCreate}
-                disabled={multipleRequest}
+                disabled={multipleRequest || !isRead}
               >
 
-{
-  spinner ? <div class="spinner-border text-warning" style={{ fontSize: "0.5rem" }} role="status"> </div> : ''
-}
-                
+                {
+                  spinner ? <div class="spinner-border text-warning" style={{ fontSize: "0.5rem" }} role="status"> </div> : ''
+                }
+
 
                 {t('added')}
               </button>

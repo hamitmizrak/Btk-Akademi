@@ -29,6 +29,9 @@ i18n.use(initReactI18next).init({
                    'register_update':"Register Update",
                    'register_view':"Register View",
                    'register_create':"Register Create",
+                   'is_read':"Is Read ?",
+                   'close':'Close',
+                   'not_Showing':'Not Showing'
                 }
             },
         tr:
@@ -56,6 +59,9 @@ i18n.use(initReactI18next).init({
                    'register_update':"Kayıt Güncelle",
                    'register_view':"Kayıtları Göster",
                    'register_create':"Kayıt Ekle",
+                   'is_read':"Okunuz mu ?",
+                   'close':'Kapat',
+                   'not_Showing':'Bir Daha Gösterme'
                    
                 }
             }
