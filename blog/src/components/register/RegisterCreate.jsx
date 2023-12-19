@@ -220,7 +220,6 @@ function RegisterCreate({ t, i18n, props }) {
                 <label
                   className="form-check-label"
                   htmlFor="isRead"
-
                 >
                   {t('is_read')}
                 </label>
@@ -269,17 +268,6 @@ function RegisterCreate({ t, i18n, props }) {
                 </div>
               </div>
 
-
-              <script>
-                const myModal = new bootstrap.Modal(
-                document.getElementById("modalId"),
-                options,
-                );
-              </script>
-
-
-
-
               {/* RESET-SUBMIT */}
               <button
                 type="reset"
@@ -298,10 +286,13 @@ function RegisterCreate({ t, i18n, props }) {
                 disabled={multipleRequest || !isRead}
               >
 
-                {
+                {/* {
                   spinner ? <div class="spinner-border text-warning" style={{ fontSize: "0.5rem" }} role="status"> </div> : ''
+                } */}
+                
+                {
+                  spinner && <div class="spinner-border text-warning" style={{ fontSize: "0.5rem" }} role="status"> </div>
                 }
-
 
                 {t('added')}
               </button>
