@@ -8,7 +8,7 @@ import React, { useEffect, useState } from 'react'
 import { withTranslation } from 'react-i18next'
 
 // Router
-import { useNavigate } from 'react-router-dom';
+import { matchPath, useNavigate, useParams } from 'react-router-dom';
 
 
 // FUNCTION VIEW
@@ -23,6 +23,11 @@ function RegisterView({ t, i18n, props }) {
   // STATE  ID
   const [viewId, setViewId] = useState(null);
 
+  // PARAMS ID:
+  // Dikkat: routerdan yazıldığı gibi aldım:
+  // Örnek:  <Route path={ `/register/view/:id`} element={<RegisterView />} />
+  let { id } = useParams();
+
   // USE EFFECT 
   useEffect(() => {
     viewFindById()
@@ -30,7 +35,16 @@ function RegisterView({ t, i18n, props }) {
 
   // FIND BY ID
   const viewFindById = () => {
-    setViewId(localStorage.getItem('viewId'))
+    // 1.YOL (ID)
+    // Local Storage
+    //setViewId(localStorage.getItem('viewId'))
+
+    // 2.YOL (ID)
+    // useParams()
+    setViewId(id)
+
+    // useParams
+    //setViewId(parameterViewId.id)
     axios.get(persistMockApiLink().concat(`/${viewId}`)) //${viewId}
       .then((response) => {
         console.log(response.data);
@@ -47,14 +61,13 @@ function RegisterView({ t, i18n, props }) {
     return "https://657ae453394ca9e4af12f9c6.mockapi.io/api/v1/blog/register"
   }
 
-
   // RETURN
   return (
     <React.Fragment>
-      <div className='container text-center mt-5 mb-5'>
+      <div className='container text-center mt-3 mb-3'>
         <div className='row'>
           {/* Card */}
-          <div className="card w-50">
+          <div className="card col-xs-12  col-md-7 col-xl-7 mx-auto">
             {/* Card image */}
             <div className="view overlay">
               <img
@@ -69,6 +82,7 @@ function RegisterView({ t, i18n, props }) {
             {/* Card content */}
             <div className="card-body">
               {/* Title */}
+
               <h4 className="card-title">{registerViewState.id}</h4>
               {/* Text */}
               <p className="card-text">

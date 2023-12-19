@@ -4,7 +4,7 @@
 import React, { Component } from 'react';
 
 // ROUTER
-import { Navigate, Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes, useParams } from 'react-router-dom'
 import { withTranslation } from 'react-i18next';
 
 // Header, Main, Footer
@@ -17,9 +17,12 @@ import RegisterUpdate from './components/register/RegisterUpdate';
 import RegisterCreate from './components/register/RegisterCreate';
 import RegisterView from './components/register/RegisterView';
 
+
 // CLASS
-class RouterBlog extends Component {
-    render() {
+function RouterBlog() {
+
+    //let { registerId } = useParams();
+
         return (
             // dark mode: App 
             <div className="App">
@@ -42,7 +45,7 @@ class RouterBlog extends Component {
                             {/* Blog */}
                             <Route path={"/register/list"} element={<RegisterList />} />
                             <Route path={"/register/create"} element={<RegisterCreate />} />
-                            <Route path={"/register/view/:id"} element={<RegisterView />} />
+                            <Route path={ `/register/view/:id`} element={<RegisterView />} />
                             <Route path={"/register/update/:id"} element={<RegisterUpdate />} />
  
                         {/*OTHER PATH*/}
@@ -55,7 +58,6 @@ class RouterBlog extends Component {
                 <Footer />
             </div>
         );// end return 
-    }// end render 
 }// end class 
 
 // EXPORT 
