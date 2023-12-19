@@ -7,6 +7,8 @@ function LoginContext() {
     const [roleName, setRoleName] = useState(undefined)
     const [isLogin, setIsLogin] = useState(false)
 
+    
+
     // CONTEXT
     const LoginAuthenticationContext = React.createContext();
 
